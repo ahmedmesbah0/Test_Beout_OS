@@ -1,6 +1,6 @@
-# HORUS Security Appliance – Demo Edition
+# Beout_OS Security Appliance – Demo Edition
 
-This repository contains the source code and build infrastructure for a production‑quality demonstration of the HORUS Security Appliance.
+This repository contains the source code and build infrastructure for a production‑quality demonstration of the Beout_OS Security Appliance.
 
 ## Quick Start
 1. **Build the project**
@@ -17,7 +17,7 @@ This repository contains the source code and build infrastructure for a producti
    ```
 4. **Launch the demo VM**
    ```sh
-   qemu-system-x86_64 -cdrom build/horus-demo.iso -m 2048 -enable-kvm
+   qemu-system-x86_64 -cdrom build/beout_os-demo.iso -m 2048 -enable-kvm
    ```
 
 See the `docs/` directory for detailed build, architecture, and developer guides.

@@ -1,0 +1,21 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/mesba7/Documents/GitHub/Test_Beout_OS/build/cmake_install.cmake",
+		"/home/mesba7/Documents/GitHub/Test_Beout_OS/build/_deps/googletest-build/cmake_install.cmake",
+		"/home/mesba7/Documents/GitHub/Test_Beout_OS/build/_deps/googletest-build/googlemock/cmake_install.cmake",
+		"/home/mesba7/Documents/GitHub/Test_Beout_OS/build/_deps/googletest-build/googletest/cmake_install.cmake",
+		"/home/mesba7/Documents/GitHub/Test_Beout_OS/build/common/cmake_install.cmake",
+		"/home/mesba7/Documents/GitHub/Test_Beout_OS/build/crypto/cmake_install.cmake",
+		"/home/mesba7/Documents/GitHub/Test_Beout_OS/build/logging/cmake_install.cmake",
+		"/home/mesba7/Documents/GitHub/Test_Beout_OS/build/database/cmake_install.cmake",
+		"/home/mesba7/Documents/GitHub/Test_Beout_OS/build/config-engine/cmake_install.cmake",
+		"/home/mesba7/Documents/GitHub/Test_Beout_OS/build/provisioning/cmake_install.cmake",
+		"/home/mesba7/Documents/GitHub/Test_Beout_OS/build/appliance-cli/cmake_install.cmake",
+		"/home/mesba7/Documents/GitHub/Test_Beout_OS/build/activation/cmake_install.cmake",
+		"/home/mesba7/Documents/GitHub/Test_Beout_OS/build/licensing/cmake_install.cmake",
+		"/home/mesba7/Documents/GitHub/Test_Beout_OS/build/api/cmake_install.cmake",
+		"/home/mesba7/Documents/GitHub/Test_Beout_OS/build/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

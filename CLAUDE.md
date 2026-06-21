@@ -10,12 +10,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Lint**: `clang-tidy src/**/*.cpp && cppcheck src/`
 - **Format**: `clang-format -i src/**/*.cpp include/**/*.hpp`
 - **Generate ISO**: `./build.sh iso` (placeholder – will invoke live-build later)
-- **Launch demo VM**: `qemu-system-x86_64 -cdrom build/horus-demo.iso -m 2048 -enable-kvm`
+- **Launch demo VM**: `qemu-system-x86_64 -cdrom build/beout_os-demo.iso -m 2048 -enable-kvm`
 
 ## High‑Level Architecture
 
 ```
-horus/
+beout_os/
 ├─ installer/        # Debian live-build configuration & ISO generation
 ├─ boot/             # Bootloader (GRUB) and kernel images
 ├─ provisioning/     # Provisioning CLI source code

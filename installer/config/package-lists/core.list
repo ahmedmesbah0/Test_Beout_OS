@@ -1,0 +1,9 @@
+debian-installer-launcher
+live-boot
+live-config
+grub-efi-amd64
+grub-pc
+xorriso
+isolinux
+systemd
+systemd-resolved

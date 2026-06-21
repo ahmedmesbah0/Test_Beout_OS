@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -Wpedantic -Werror -O3 -DNDEBUG -O3 -D_FORTIFY_SOURCE=2 -fstack-protector-strong -Wl,--dependency-file=CMakeFiles/beout_os_provisioning.dir/link.d CMakeFiles/beout_os_provisioning.dir/main.cpp.o CMakeFiles/beout_os_provisioning.dir/cli_engine.cpp.o -o beout_os_provisioning  ../database/libdatabase.a ../libsqlite3_lib.a

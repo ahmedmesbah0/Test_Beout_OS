@@ -1,1 +1,11 @@
-add_executable(horus_api server.cpp)
+project(api)
+
+add_executable(beout_os_api
+    main.cpp
+    api_server.cpp
+)
+
+target_include_directories(beout_os_api PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(beout_os_api PRIVATE database OpenSSL::SSL OpenSSL::Crypto pthread)
+
+install(TARGETS beout_os_api DESTINATION bin)

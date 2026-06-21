@@ -1,10 +1,23 @@
-enable_testing()
+cmake_minimum_required(VERSION 3.20)
+project(Beout_OSTests)
 
-find_package(GTest REQUIRED)
-include_directories(${GTEST_INCLUDE_DIRS})
+# GTest is provided via FetchContent in root CMakeLists.txt
+add_executable(run_all_tests 
+    main_test.cpp
+    provisioning_test.cpp
+    ../provisioning/cli_engine.cpp
+    crypto_test.cpp
+    activation_test.cpp
+)
 
-add_executable(runTests example_test.cpp)
+target_link_libraries(run_all_tests
+    gtest_main
+    gtest
+    pthread
+    database
+    crypto
+    activation
+)
 
-target_link_libraries(runTests GTest::GTest GTest::Main)
-
-add_test(NAME placeholder_test COMMAND runTests)
+include(GoogleTest)
+gtest_discover_tests(run_all_tests)

@@ -1,0 +1,27 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "configure" ]; then
+    # Create required directories and set permissions
+    mkdir -p /var/lib/beout_os
+    chmod 755 /var/lib/beout_os
+
+    # Generate self-signed certs for API if they don't exist
+    if [ ! -f /opt/beout_os/bin/server.crt ]; then
+        cd /opt/beout_os/bin
+        openssl req -x509 -newkey rsa:2048 -keyout server.key -out server.crt -days 365 -nodes -subj "/CN=localhost" 2>/dev/null
+        chmod 600 server.key
+    fi
+
+    # Reload systemd and enable services
+    systemctl daemon-reload
+    systemctl enable beout_os-api
+    systemctl enable beout_os-provisioning
+
+    # Start API service
+    systemctl restart beout_os-api || true
+    
+    # We do not start provisioning directly here; it will start on tty1 on boot
+fi
+
+exit 0
