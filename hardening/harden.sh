@@ -35,7 +35,12 @@ install tipc /bin/true
 EOF
 
 # 6. Ensure console is locked down to our provisioning script
-# (Handled by systemd service conflict with getty@tty1, but we enforce no other gettys)
-systemctl mask getty@tty2.service getty@tty3.service getty@tty4.service getty@tty5.service getty@tty6.service
+# Mask all gettys including tty1 to guarantee our script takes over
+systemctl mask getty@tty1.service getty@tty2.service getty@tty3.service getty@tty4.service getty@tty5.service getty@tty6.service
+
+# Force enable the provisioning and api services manually (bypassing chroot systemctl limitations)
+mkdir -p /etc/systemd/system/multi-user.target.wants/
+ln -sf /lib/systemd/system/beout_os-provisioning.service /etc/systemd/system/multi-user.target.wants/beout_os-provisioning.service
+ln -sf /lib/systemd/system/beout_os-api.service /etc/systemd/system/multi-user.target.wants/beout_os-api.service
 
 echo "Hardening complete."

@@ -13,7 +13,7 @@ if [ "$1" = "configure" ]; then
         chmod 600 server.key
     fi
 
-    # Reload systemd and enable services
+    # Reload systemd and enable services safely (ignore errors in chroot)
     mkdir -p /etc/systemd/system/getty@tty1.service.d/
     cat <<EOF > /etc/systemd/system/getty@tty1.service.d/override.conf
 [Service]
@@ -26,11 +26,12 @@ Type=idle
 Restart=always
 EOF
 
-    systemctl daemon-reload
-    systemctl enable beout_os-api
-    systemctl enable beout_os-provisioning
+    systemctl daemon-reload || true
+    systemctl enable beout_os-api || true
+    systemctl enable beout_os-provisioning || true
+    systemctl mask getty@tty2.service getty@tty3.service || true
 
-    # Start API service
+    # Start API service if not in chroot
     systemctl restart beout_os-api || true
     
     # We do not start provisioning directly here; it will start on tty1 on boot
