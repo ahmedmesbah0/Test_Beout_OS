@@ -6,6 +6,7 @@ set -e
 BASE_DIR="$(pwd)/packaging/debian"
 
 echo "Building Beout_OS components..."
+./build.sh clean
 ./build.sh configure
 ./build.sh build
 
