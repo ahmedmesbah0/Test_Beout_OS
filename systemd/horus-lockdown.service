@@ -1,0 +1,56 @@
+[Unit]
+Description=Beout Security Lockdown Service
+Before=local-fs.target
+Before=basic.target
+After=local-fs-pre.target
+After=horus-overlay.service
+DefaultDependencies=no
+ConditionPathExists=!/mnt/horus-config/config/skip-lockdown
+Conflicts=shutdown.target
+Before=shutdown.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+
+ExecStartPre=/bin/sh -c 'passwd -l root 2>/dev/null || true'
+
+ExecStartPre=/bin/sh -c 'systemctl mask ctrl-alt-del.target 2>/dev/null || true'
+
+ExecStartPre=/bin/sh -c 'for getty in getty@tty2.service getty@tty3.service getty@tty4.service getty@tty5.service getty@tty6.service getty@ttyS0.service getty@ttyS1.service serial-getty@ttyS0.service serial-getty@ttyS1.service; do systemctl mask "$getty" 2>/dev/null || true; done'
+
+ExecStartPre=/bin/sh -c 'if [ ! -f /mnt/horus-config/config/ssh-enabled ]; then systemctl mask ssh.service 2>/dev/null || true; systemctl mask sshd.service 2>/dev/null || true; else systemctl unmask ssh.service 2>/dev/null || true; systemctl unmask sshd.service 2>/dev/null || true; fi'
+
+ExecStartPre=/bin/sh -c 'systemctl mask avahi-daemon.service 2>/dev/null || true; systemctl mask avahi-daemon.socket 2>/dev/null || true'
+ExecStartPre=/bin/sh -c 'systemctl mask cups.service 2>/dev/null || true; systemctl mask cups.socket 2>/dev/null || true; systemctl mask cups-browsed.service 2>/dev/null || true'
+ExecStartPre=/bin/sh -c 'systemctl mask ModemManager.service 2>/dev/null || true'
+ExecStartPre=/bin/sh -c 'systemctl mask whoopsie.service 2>/dev/null || true'
+ExecStartPre=/bin/sh -c 'systemctl mask apport.service 2>/dev/null || true'
+ExecStartPre=/bin/sh -c 'systemctl mask bluetooth.service 2>/dev/null || true'
+ExecStartPre=/bin/sh -c 'systemctl mask cups.path 2>/dev/null || true'
+ExecStartPre=/bin/sh -c 'systemctl mask rpcbind.service 2>/dev/null || true'
+ExecStartPre=/bin/sh -c 'systemctl mask nfs-common.service 2>/dev/null || true'
+ExecStartPre=/bin/sh -c 'systemctl mask rsyslog.service 2>/dev/null || true'
+
+ExecStartPre=/bin/sh -c 'cat > /usr/bin/apt <<WRAPPER\n#!/bin/sh\nprintf "Access denied. This appliance does not allow package management.\\n"\nexit 1\nWRAPPER\nchmod 755 /usr/bin/apt'
+
+ExecStartPre=/bin/sh -c 'cat > /usr/bin/dpkg <<WRAPPER\n#!/bin/sh\nprintf "Access denied. This appliance does not allow package management.\\n"\nexit 1\nWRAPPER\nchmod 755 /usr/bin/dpkg'
+
+ExecStartPre=/bin/sh -c 'cat > /usr/bin/bash <<WRAPPER\n#!/bin/sh\nprintf "Access denied. Interactive shell access is disabled on this appliance.\\n"\nexit 1\nWRAPPER\nchmod 755 /usr/bin/bash'
+
+ExecStartPre=/bin/sh -c 'find /usr/bin /usr/sbin /bin /sbin -perm -4000 -type f 2>/dev/null | while read f; do case "$f" in /usr/bin/sudo|/usr/bin/passwd|/usr/bin/su|/usr/bin/newgrp|/usr/bin/gpasswd|/usr/bin/chsh|/usr/bin/chfn) ;; *) chmod u-s "$f" 2>/dev/null || true ;; esac; done'
+
+ExecStartPre=/bin/sh -c 'find /usr/bin /usr/sbin /bin /sbin -perm -2000 -type f 2>/dev/null | while read f; do case "$f" in /usr/bin/sudo|/usr/bin/passwd|/usr/bin/su|/usr/bin/newgrp|/usr/bin/gpasswd|/usr/bin/chsh|/usr/bin/chfn) ;; *) chmod g-s "$f" 2>/dev/null || true ;; esac; done'
+
+ExecStartPre=/bin/sh -c 'printf "kernel.kptr_restrict = 1\nkernel.dmesg_restrict = 1\nkernel.core_pattern = |/dev/null\nkernel.unprivileged_bpf_disabled = 1\nfs.protected_symlinks = 1\nfs.protected_hardlinks = 1\n" > /etc/sysctl.d/99-horus-lockdown.conf'
+ExecStartPre=/bin/sh -c 'sysctl --system 2>/dev/null || true'
+
+ExecStartPre=/bin/sh -c 'printf "* hard core 0\nroot hard core 0\n" > /etc/security/limits.d/99-horus-lockdown.conf'
+ExecStartPre=/bin/sh -c 'printf "kernel.core_pattern = |/dev/null\n" > /proc/sys/kernel/core_pattern 2>/dev/null || true'
+
+ExecStartPre=/bin/sh -c 'systemctl enable apparmor.service 2>/dev/null || true; systemctl start apparmor.service 2>/dev/null || true'
+
+ExecStart=/bin/sh -c 'mount -o remount,ro /usr 2>/dev/null || true; mount -o remount,ro /etc 2>/dev/null || true; mount -o remount,ro /bin 2>/dev/null || true; mount -o remount,ro /sbin 2>/dev/null || true; mount -o remount,ro /lib 2>/dev/null || true'
+
+[Install]
+WantedBy=multi-user.target

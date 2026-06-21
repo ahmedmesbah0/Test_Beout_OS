@@ -1,0 +1,28 @@
+[Unit]
+Description=BeoutOS Web UI Service - Management Interface
+After=network-online.target
+After=horus-overlay.service
+After=horus-activation.service
+Wants=network-online.target
+ConditionPathExists=/mnt/horus-config/license/activated
+ConditionPathExists=/mnt/horus-config/config/webui-enabled
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/nginx -c /etc/horus/nginx.conf
+ExecReload=/usr/sbin/nginx -s reload -c /etc/horus/nginx.conf
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=65535
+StandardOutput=journal
+StandardError=journal
+
+Environment=HORUS_MODE=active
+Environment=BEOUTOS_CONFIG_MOUNT=/mnt/horus-config
+Environment=HORUS_LICENSE=activated
+
+TimeoutStartSec=90
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

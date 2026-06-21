@@ -1,0 +1,24 @@
+[Unit]
+Description=BeoutOS Update Manager Service
+After=network-online.target
+After=horus-overlay.service
+Wants=network-online.target
+ConditionPathExists=/mnt/horus-config/license/activated
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/horus-update
+Restart=on-failure
+RestartSec=30
+StandardOutput=journal
+StandardError=journal
+
+Environment=HORUS_MODE=active
+Environment=BEOUTOS_CONFIG_MOUNT=/mnt/horus-config
+Environment=HORUS_LICENSE=activated
+
+TimeoutStartSec=600
+TimeoutStopSec=60
+
+[Install]
+WantedBy=multi-user.target

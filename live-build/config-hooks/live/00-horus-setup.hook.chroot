@@ -1,0 +1,524 @@
+#!/bin/bash
+
+set -e
+
+BEOUTOS_VERSION="1.0.0"
+
+echo "=== BeoutOS Chroot Setup Hook ==="
+
+PURGE_PACKAGES="
+    aptitude
+    bsdgames
+    cpp
+    g++
+    gcc
+    gdb
+    make
+    manpages
+    man-db
+    nano
+    vim
+    vim-tiny
+    ed
+    emacs
+    less
+    info
+    install-info
+    w3m
+    lynx
+    links
+    ncurses-term
+    tasksel
+    task-desktop
+    task-laptop
+    task-ssh-server
+    desktop-base
+    xserver-common
+    xorg
+    x11-common
+    gnome-shell
+    kde-standard
+    xfce4
+    lxde
+    mate-desktop-environment
+    cups
+    avahi-daemon
+    pulseaudio
+    alsa-utils
+    sound-daemon
+    bluetooth
+    wpasupplicant
+    network-manager
+    modemmanager
+    udisks2
+    upower
+    accountsservice
+    whoopsie
+    apport
+    popularity-contest
+    ubuntu-standard
+    debconf-i18n
+"
+
+echo "Purging unnecessary packages..."
+for pkg in ${PURGE_PACKAGES}; do
+    if dpkg -l "${pkg}" 2>/dev/null | grep -q '^ii'; then
+        echo "  Removing: ${pkg}"
+        apt-get purge -y "${pkg}" 2>/dev/null || true
+    fi
+done
+
+apt-get autoremove -y 2>/dev/null || true
+apt-get clean 2>/dev/null || true
+
+echo "Locking down apt/dpkg for user access..."
+cat > /usr/local/sbin/horus-apt-lockdown <<'APTLOCK'
+#!/bin/bash
+echo "Package management is not available on BeoutOS."
+echo "All software updates must be performed through the official update channel."
+exit 1
+APTLOCK
+chmod 755 /usr/local/sbin/horus-apt-lockdown
+
+for cmd in apt apt-get apt-cache dpkg aptitude; do
+    if [ -x "/usr/bin/${cmd}" ]; then
+        mv "/usr/bin/${cmd}" "/usr/bin/.horus-${cmd}.real"
+        ln -sf /usr/local/sbin/horus-apt-lockdown "/usr/bin/${cmd}"
+    fi
+done
+
+echo "Creating BeoutOS directory structure..."
+mkdir -p /etc/horus
+mkdir -p /etc/horus/network
+mkdir -p /etc/horus/security
+mkdir -p /etc/horus/services
+mkdir -p /etc/horus/vpn
+mkdir -p /etc/horus/suricata
+mkdir -p /etc/horus/ssl
+mkdir -p /etc/horus/license
+mkdir -p /etc/horus/logs
+mkdir -p /var/lib/horus
+mkdir -p /var/lib/horus/overlay
+mkdir -p /var/lib/horus/state
+mkdir -p /var/lib/horus/suricata
+mkdir -p /var/log/horus
+mkdir -p /mnt/horus-config
+mkdir -p /mnt/horus-config/overlay
+mkdir -p /mnt/horus-config/persistent
+mkdir -p /mnt/horus-config/backup
+mkdir -p /usr/share/horus
+mkdir -p /usr/share/horus/provisioning
+mkdir -p /usr/share/horus/scripts
+
+echo "BEOUTOS_VERSION=${BEOUTOS_VERSION}" > /etc/horus/version
+echo "BEOUTOS_CODENAME=atlas" >> /etc/horus/version
+echo "HORUS_BUILD_DATE=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> /etc/horus/version
+echo "HORUS_BUILD_HOST=$(hostname)" >> /etc/horus/version
+
+echo "Configuring OverlayFS mount points..."
+cat > /etc/horus/overlay.conf <<'OVERLAYCONF'
+OVERLAY_LOWERDIR=/usr/lib/live/mount/rootfs.squashfs
+OVERLAY_UPPERDIR=/mnt/horus-config/overlay/upper
+OVERLAY_WORKDIR=/mnt/horus-config/overlay/work
+OVERLAY_MOUNTPOINT=/usr/lib/live/mount/overlay
+OVERLAY_CONF_PARTITION=/mnt/horus-config
+OVERLAYCONF
+
+mkdir -p /mnt/horus-config/overlay/upper
+mkdir -p /mnt/horus-config/overlay/work
+
+cat > /etc/systemd/system/horus-overlayfs.service <<'OVERLAYUNIT'
+[Unit]
+Description=BeoutOS OverlayFS Runtime Configuration Layer
+DefaultDependencies=no
+After=local-fs.target
+Before=basic.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStartPre=/bin/mkdir -p /mnt/horus-config/overlay/upper /mnt/horus-config/overlay/work
+ExecStart=/bin/mount -t overlay overlay -o lowerdir=${OVERLAY_LOWERDIR},upperdir=/mnt/horus-config/overlay/upper,workdir=/mnt/horus-config/overlay/work /usr/lib/live/mount/overlay
+ExecStop=/bin/umount /usr/lib/live/mount/overlay
+
+[Install]
+WantedBy=local-fs.target
+OVERLAYUNIT
+
+echo "Setting hostname to horus..."
+echo "horus" > /etc/hostname
+sed -i 's/127.0.1.1.*$/127.0.1.1 horus/' /etc/hosts 2>/dev/null || true
+
+echo "Configuring timezone to UTC..."
+ln -sf /usr/share/zoneinfo/UTC /etc/localtime
+echo "UTC" > /etc/timezone
+
+echo "Configuring locale to en_US.UTF-8..."
+sed -i 's/^# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen 2>/dev/null || true
+locale-gen en_US.UTF-8 2>/dev/null || true
+update-locale LANG=en_US.UTF-8 2>/dev/null || true
+
+echo "Configuring console for provisioning CLI..."
+cat > /etc/default/console-setup <<'CONSOLECONF'
+ACTIVE_CONSOLES="/dev/tty1"
+CHARMAP="UTF-8"
+CODESET="Lat15"
+FONTFACE="TerminusBold"
+FONTSIZE="16"
+VIDEOMODE=""
+CONSOLECONF
+
+echo "Disabling network auto-configuration..."
+cat > /etc/network/interfaces <<'NETCONF'
+auto lo
+iface lo inet loopback
+
+NETCONF
+rm -f /etc/network/interfaces.d/* 2>/dev/null || true
+
+cat > /etc/systemd/system/horus-network-setup.service <<'NETUNIT'
+[Unit]
+Description=BeoutOS Network Interface Setup
+After=network-pre.target
+Before=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/share/horus/scripts/network-setup.sh
+
+[Install]
+WantedBy=network.target
+NETUNIT
+
+mkdir -p /usr/share/horus/scripts
+cat > /usr/share/horus/scripts/network-setup.sh <<'NETSCRIPT'
+#!/bin/bash
+ip link set lo up
+for iface in $(ls /sys/class/net/ | grep -v lo); do
+    ip link set "${iface}" down
+    ip addr flush dev "${iface}"
+done
+NETSCRIPT
+chmod 755 /usr/share/horus/scripts/network-setup.sh
+
+echo "Creating provisioning mode systemd target..."
+cat > /etc/systemd/system/beoutos-provisioning.target <<'PROVTARGET'
+[Unit]
+Description=BeoutOS Provisioning Mode
+Requires=basic.target
+After=basic.target
+Conflicts=multi-user.target
+AllowIsolate=yes
+PROVTARGET
+
+echo "Creating provisioning CLI service..."
+cat > /etc/systemd/system/horus-provisioning-cli.service <<'PROVCLI'
+[Unit]
+Description=BeoutOS Provisioning CLI
+After=beoutos-provisioning.target horus-network-setup.service
+ConditionPathExists=/usr/share/horus/provisioning/cli
+
+[Service]
+Type=idle
+ExecStart=/usr/share/horus/provisioning/cli --tty /dev/tty1
+StandardInput=tty
+StandardOutput=tty
+StandardError=tty
+TTYPath=/dev/tty1
+TTYReset=yes
+TTYVHangup=yes
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=beoutos-provisioning.target
+PROVCLI
+
+echo "Creating provisioning CLI placeholder..."
+cat > /usr/share/horus/provisioning/cli <<'PROVCLIPLACEHOLDER'
+#!/bin/bash
+echo "=========================================="
+echo "   BeoutOS v${BEOUTOS_VERSION}"
+echo "   Provisioning Mode - Console Interface"
+echo "=========================================="
+echo ""
+echo "This appliance requires initial provisioning"
+echo "before network security services can be activated."
+echo ""
+echo "Available commands:"
+echo "  provision    - Begin initial provisioning"
+echo "  status       - Show system status"
+echo "  version      - Show appliance version"
+echo "  reboot       - Reboot the appliance"
+echo "  shutdown     - Shut down the appliance"
+echo ""
+while true; do
+    read -r -p "horus> " cmd
+    case "${cmd}" in
+        provision)  echo "Provisioning wizard not yet installed.";;
+        status)     echo "System status: UNPROVISIONED"; echo "Network: DISABLED"; echo "Services: INACTIVE";;
+        version)    cat /etc/horus/version;;
+        reboot)     reboot;;
+        shutdown)   poweroff;;
+        help)       echo "Commands: provision, status, version, reboot, shutdown, help";;
+        "")         continue;;
+        *)          echo "Unknown command: ${cmd}"; echo "Type 'help' for available commands.";;
+    esac
+done
+PROVCLIPLACEHOLDER
+chmod 755 /usr/share/horus/provisioning/cli
+
+echo "Locking down console access - disabling shell login..."
+passwd -l root 2>/dev/null || true
+
+cat > /etc/systemd/system/horus-console-lock.service <<'LOCKUNIT'
+[Unit]
+Description=BeoutOS Console Access Lockdown
+After=beoutos-provisioning.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/sed -i '/^1:/s/^1:/1:horus-provisioning/' /etc/inittab
+ExecStart=/usr/bin/chvt 1
+
+[Install]
+WantedBy=beoutos-provisioning.target
+LOCKUNIT
+
+sed -i 's/^1:2345:respawn:sbin/getty.*/1:2345:respawn:sbin/agetty --autologin beoutos-admin --noclear tty1 115200 linux/' /etc/inittab 2>/dev/null || true
+
+cat > /etc/security/access.conf <<'ACCESSCONF'
++:root:LOCAL
++:beoutos-admin:LOCAL
+-:ALL:ALL
+ACCESSCONF
+
+echo "beoutos-admin" > /etc/issue.net
+cat > /etc/issue <<'ISSUECONF'
+BeoutOS v${BEOUTOS_VERSION}
+Unauthorized access is prohibited.
+All activity is monitored and logged.
+ISSUECONF
+
+echo "Disabling unnecessary systemd services..."
+for service in \
+    avahi-daemon \
+    bluetooth \
+    cups \
+    ModemManager \
+    NetworkManager \
+    wpa_supplicant \
+    accounts-daemon \
+    whoopsie \
+    apport \
+    anacron \
+    cron \
+    atd \
+    rsync \
+    speech-dispatcher \
+    udisks2 \
+    upower \
+    colord \
+    sane-daemon \
+    packagekit \
+    apt-daily \
+    apt-daily-upgrade \
+    man-db \
+    e2scrub_all \
+    dpkg-db-backup \
+    fwupd \
+    switcheroo-control; do
+    systemctl disable "${service}" 2>/dev/null || true
+    systemctl mask "${service}" 2>/dev/null || true
+done
+
+echo "Enabling essential BeoutOS services..."
+systemctl enable horus-overlayfs.service 2>/dev/null || true
+systemctl enable beoutos-provisioning.target 2>/dev/null || true
+systemctl enable horus-provisioning-cli.service 2>/dev/null || true
+systemctl enable horus-network-setup.service 2>/dev/null || true
+systemctl enable horus-console-lock.service 2>/dev/null || true
+
+echo "Setting default boot target to provisioning..."
+ln -sf /etc/systemd/system/beoutos-provisioning.target /etc/systemd/system/default.target
+
+echo "Hardening system - removing compilers and build tools..."
+PURGE_HARDEN="
+    build-essential
+    cpp
+    g++
+    gcc
+    make
+    gdb
+    flex
+    bison
+    autoconf
+    automake
+    libtool
+    pkg-config
+    python3-dev
+    perl-dev
+    libc6-dev
+    linux-kernel-headers
+    dh-make
+    devscripts
+    fakeroot
+    lintian
+    patch
+    diffutils
+    quilt
+"
+for pkg in ${PURGE_HARDEN}; do
+    apt-get purge -y "${pkg}" 2>/dev/null || true
+done
+apt-get autoremove -y 2>/dev/null || true
+apt-get clean 2>/dev/null || true
+
+echo "Setting up Secure Boot signing directory..."
+mkdir -p /etc/horus/secureboot
+mkdir -p /usr/share/horus/secureboot
+mkdir -p /usr/local/share/horus/secureboot
+mkdir -p /var/lib/horus/secureboot
+
+cat > /etc/horus/secureboot/secureboot.conf <<'SBCONF'
+SECUREBOOT_ENABLED=yes
+SECUREBOOT_SIGNING_KEY=/etc/horus/secureboot/db.key
+SECUREBOOT_SIGNING_CERT=/etc/horus/secureboot/db.crt
+SECUREBOOT_ENROLLMENT_MODE=manual
+SECUREBOOT_VARIANT=mok
+SBCONF
+
+echo "Configuring GRUB for read-only root..."
+cat > /etc/default/grub <<'GRUBCONF'
+GRUB_DEFAULT=0
+GRUB_TIMEOUT=0
+GRUB_TIMEOUT_STYLE=hidden
+GRUB_DISTRIBUTOR="BeoutOS"
+GRUB_CMDLINE_LINUX_DEFAULT="boot=live components quiet splash systemd.unit=beoutos-provisioning.target ro root.squashfs=xz"
+GRUB_CMDLINE_LINUX="console=tty1 console=ttyS0,115200n8 earlyprintk=ttyS0,115200"
+GRUB_TERMINAL=console
+GRUB_SERIAL_COMMAND="serial --speed=115200 --unit=0 --word=8 --parity=no --stop=1"
+GRUB_DISABLE_OS_PROBER=true
+GRUB_DISABLE_RECOVERY=true
+GRUB_DISABLE_SUBMENU=true
+GRUB_RECORDFAIL_TIMEOUT=0
+GRUB_INIT_TUNE=""
+GRUB_SAVEDEFAULT=false
+GRUB_BACKGROUND=""
+GRUB_GFXPAYLOAD_LINUX=text
+GRUBCONF
+
+mkdir -p /etc/grub.d
+
+cat > /etc/grub.d/40_custom <<'GRUBCUSTOM'
+#!/bin/sh
+exec tail -n +3 $0
+
+menuentry "BeoutOS (Provisioning Mode)" {
+    linux /live/vmlinuz boot=live components quiet systemd.unit=beoutos-provisioning.target ro
+    initrd /live/initrd.img
+}
+
+menuentry "BeoutOS (Recovery Console)" {
+    linux /live/vmlinuz boot=live components quiet systemd.unit=emergency.target ro
+    initrd /live/initrd.img
+}
+GRUBCUSTOM
+chmod 755 /etc/grub.d/40_custom
+
+echo "Configuring fstab for read-only root with overlay..."
+cat > /etc/fstab <<'FSTABCONF'
+# BeoutOS - Read-Only Root Filesystem
+# <file system>  <mount point>  <type>  <options>  <dump>  <pass>
+proc             /proc           proc    defaults                       0  0
+sysfs            /sys            sysfs   defaults                       0  0
+devpts           /dev/pts        devpts  gid=5,mode=620                 0  0
+tmpfs            /tmp            tmpfs   defaults,nosuid,nodev          0  0
+tmpfs            /run            tmpfs   defaults,nosuid,nodev          0  0
+tmpfs            /var/log        tmpfs   defaults,nosuid,nodev          0  0
+tmpfs            /var/tmp        tmpfs   defaults,nosuid,nodev          0  0
+FSTABCONF
+
+echo "Removing unnecessary SUID/SGID binaries..."
+find / -perm -4000 -type f 2>/dev/null | while read suid_file; do
+    case "${suid_file}" in
+        /usr/bin/sudo|/usr/bin/passwd|/usr/bin/su|/usr/bin/newgrp|/usr/bin/gpasswd|/usr/bin/chsh|/usr/bin/chfn|/usr/bin/mount|/usr/bin/umount)
+            continue
+            ;;
+        *)
+            chmod u-s "${suid_file}" 2>/dev/null || true
+            ;;
+    esac
+done
+
+find / -perm -2000 -type f 2>/dev/null | while read sgid_file; do
+    case "${sgid_file}" in
+        /usr/bin/wall|/usr/bin/write)
+            continue
+            ;;
+        *)
+            chmod g-s "${sgid_file}" 2>/dev/null || true
+            ;;
+    esac
+done
+
+echo "Configuring kernel parameters for security..."
+cat > /etc/sysctl.d/99-horus-hardening.conf <<'SYSCTLCONF'
+kernel.dmesg_restrict = 1
+kernel.kptr_restrict = 2
+kernel.unprivileged_bpf_disabled = 1
+kernel.yama.ptrace_scope = 3
+net.core.bpf_jit_harden = 2
+net.ipv4.conf.all.send_redirects = 0
+net.ipv4.conf.default.send_redirects = 0
+net.ipv4.conf.all.accept_redirects = 0
+net.ipv4.conf.default.accept_redirects = 0
+net.ipv4.conf.all.accept_source_route = 0
+net.ipv4.conf.default.accept_source_route = 0
+net.ipv4.icmp_echo_ignore_broadcasts = 1
+net.ipv4.icmp_ignore_bogus_error_responses = 1
+net.ipv4.conf.all.log_martians = 1
+net.ipv4.conf.default.log_martians = 1
+net.ipv6.conf.all.accept_redirects = 0
+net.ipv6.conf.default.accept_redirects = 0
+net.ipv6.conf.all.accept_source_route = 0
+net.ipv6.conf.default.accept_source_route = 0
+fs.protected_hardlinks = 1
+fs.protected_symlinks = 1
+fs.protected_fifos = 2
+fs.protected_regular = 2
+SYSCTLCONF
+
+echo "Creating BeoutOS security banner..."
+cat > /etc/horus/security/banner <<'BANNERCONF'
+***************************************************************************
+*  BeoutOS - Restricted System                          *
+*                                                                         *
+*  This system is a managed security appliance. Unauthorized access       *
+*  is strictly prohibited. All access attempts are monitored, logged,     *
+*  and may be reported to law enforcement authorities.                    *
+*                                                                         *
+*  This system does not provide shell access. All configuration must      *
+*  be performed through the authorized provisioning interface.            *
+***************************************************************************
+BANNERCONF
+
+echo "Setting file permissions on sensitive directories..."
+chmod 700 /etc/horus/security
+chmod 700 /etc/horus/secureboot
+chmod 700 /etc/horus/ssl
+chmod 700 /etc/horus/license
+chmod 700 /var/lib/horus/state
+chmod 700 /usr/share/horus/scripts
+chmod 600 /etc/horus/horus.conf
+chmod 600 /etc/horus/overlay.conf
+chmod 600 /etc/horus/secureboot/secureboot.conf
+chmod 600 /etc/sysctl.d/99-horus-hardening.conf
+
+echo "Removing world-readable files from sensitive locations..."
+chmod o-rwx /var/log 2>/dev/null || true
+chmod o-rwx /var/lib/horus 2>/dev/null || true
+
+echo "=== BeoutOS Chroot Setup Hook Complete ==="

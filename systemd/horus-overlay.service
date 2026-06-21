@@ -1,0 +1,38 @@
+[Unit]
+Description=BeoutOS OverlayFS Mount Service
+Before=local-fs.target
+Before=systemd-remount-fs.service
+Before=horus-provisioning.service
+Before=horus-activation.service
+Before=horus-cli.service
+Before=horus-lockdown.service
+After=systemd-udevd.service
+After=dm-event.service
+DefaultDependencies=no
+Conflicts=shutdown.target
+Before=shutdown.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStartPre=/bin/sh -c 'modprobe overlay 2>/dev/null || true'
+ExecStartPre=/bin/sh -c 'modprobe squashfs 2>/dev/null || true'
+ExecStartPre=/bin/sh -c 'modprobe dm_crypt 2>/dev/null || true'
+ExecStartPre=/bin/mkdir -p /mnt/horus-squashfs
+ExecStartPre=/bin/mkdir -p /mnt/horus-roota-temp
+ExecStartPre=/bin/mkdir -p /mnt/horus-config
+ExecStartPre=/bin/mkdir -p /tmp/horus-overlay-work/etc
+ExecStartPre=/bin/mkdir -p /tmp/horus-overlay-work/var
+ExecStartPre=/bin/sh -c 'if [ -f /mnt/horus-roota-temp/system.squashfs ]; then mount /dev/disk/by-partlabel/BEOUTOS-ROOTA /mnt/horus-roota-temp || true; else mount /dev/disk/by-partlabel/BEOUTOS-ROOTA /mnt/horus-roota-temp; fi'
+ExecStartPre=/bin/sh -c 'mount -t squashfs /mnt/horus-roota-temp/system.squashfs /mnt/horus-squashfs'
+
+ExecStartPre=/bin/sh -c 'if cryptsetup isLuks /dev/disk/by-partlabel/BEOUTOS-CONFIG 2>/dev/null; then if [ -e /dev/tpmrm0 ]; then cryptsetup luksOpen --tpm2-device=auto /dev/disk/by-partlabel/BEOUTOS-CONFIG horus-config 2>/dev/null || cryptsetup luksOpen /dev/disk/by-partlabel/BEOUTOS-CONFIG horus-config; else cryptsetup luksOpen /dev/disk/by-partlabel/BEOUTOS-CONFIG horus-config; fi; fi'
+ExecStartPre=/bin/sh -c 'mount /dev/mapper/horus-config /mnt/horus-config'
+
+ExecStart=/bin/sh -c 'mount -t overlay overlay-etc -o lowerdir=/mnt/horus-squashfs/etc,upperdir=/mnt/horus-config/overlay-upper/etc,workdir=/tmp/horus-overlay-work/etc /etc && mount -t overlay overlay-var -o lowerdir=/mnt/horus-squashfs/var,upperdir=/mnt/horus-config/overlay-upper/var,workdir=/tmp/horus-overlay-work/var /var'
+
+ExecStop=/bin/sh -c 'umount /etc 2>/dev/null || true; umount /var 2>/dev/null || true; umount /mnt/horus-config 2>/dev/null || true; cryptsetup luksClose horus-config 2>/dev/null || true; umount /mnt/horus-squashfs 2>/dev/null || true; umount /mnt/horus-roota-temp 2>/dev/null || true'
+
+[Install]
+WantedBy=sysinit.target
+RequiredBy=local-fs.target

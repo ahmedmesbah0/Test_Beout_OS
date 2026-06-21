@@ -1,0 +1,73 @@
+#!/bin/bash
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BUILD_DIR="$(dirname "${SCRIPT_DIR}")"
+LOG_DIR="${BUILD_DIR}/build-logs"
+TIMESTAMP="$(date +%Y%m%d-%H%M%S)"
+LOG_FILE="${LOG_DIR}/build-${TIMESTAMP}.log"
+
+mkdir -p "${LOG_DIR}"
+
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "${LOG_FILE}"
+}
+
+log "BeoutOS Build Starting"
+log "Build directory: ${BUILD_DIR}"
+log "Log file: ${LOG_FILE}"
+
+cd "${BUILD_DIR}"
+
+if [ ! -d "config" ]; then
+    log "Running lb config..."
+    lb config 2>&1 | tee -a "${LOG_FILE}"
+    if [ ${PIPESTATUS[0]} -ne 0 ]; then
+        log "ERROR: lb config failed"
+        exit 1
+    fi
+    log "lb config completed successfully"
+else
+    log "Config directory exists - skipping lb config (resume build)"
+fi
+
+log "Running lb build..."
+lb build 2>&1 | tee -a "${LOG_FILE}"
+BUILD_EXIT=${PIPESTATUS[0]}
+
+if [ ${BUILD_EXIT} -ne 0 ]; then
+    log "ERROR: lb build failed with exit code ${BUILD_EXIT}"
+
+    FAILED_STAGE=""
+    for stage in bootstrap chroot binary source; do
+        if [ -d "config/.stage" ]; then
+            if [ ! -f "config/.stage/${stage}" ]; then
+                FAILED_STAGE="${stage}"
+                break
+            fi
+        fi
+    done
+
+    if [ -n "${FAILED_STAGE}" ]; then
+        log "Build failed at stage: ${FAILED_STAGE}"
+        log "To resume: clean the failed stage with 'lb clean --stage ${FAILED_STAGE}' then re-run"
+    fi
+
+    log "Partial build artifacts may be available for inspection"
+    log "Check ${LOG_FILE} for detailed error information"
+    exit ${BUILD_EXIT}
+fi
+
+ISO_FILE="$(find ${BUILD_DIR} -maxdepth 1 -name '*.iso' -type f | head -1)"
+if [ -n "${ISO_FILE}" ]; then
+    ISO_SIZE="$(du -h "${ISO_FILE}" | cut -f1)"
+    log "Build completed successfully"
+    log "Output: ${ISO_FILE} (${ISO_SIZE})"
+    log "SHA256: $(sha256sum "${ISO_FILE}" | cut -d' ' -f1)"
+else
+    log "WARNING: Build completed but no ISO file found"
+fi
+
+log "BeoutOS Build Complete"
+exit 0
