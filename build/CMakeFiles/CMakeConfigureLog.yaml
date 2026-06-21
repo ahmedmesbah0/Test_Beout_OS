@@ -1,0 +1,3260 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    searched_directories:
+      - "/home/mesba7/.local/bin/uname"
+      - "/home/mesba7/.bun/bin/uname"
+      - "/usr/local/sbin/uname"
+      - "/usr/local/bin/uname"
+      - "/usr/sbin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Linux - 6.18.7-76061807-generic - x86_64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    searched_directories:
+      - "/home/mesba7/.local/bin/gmake"
+      - "/home/mesba7/.bun/bin/gmake"
+      - "/usr/local/sbin/gmake"
+      - "/usr/local/bin/gmake"
+      - "/usr/sbin/gmake"
+    found: "/usr/bin/gmake"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER"
+    description: "CXX compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "c++"
+      - "CC"
+      - "g++"
+      - "aCC"
+      - "cl"
+      - "bcc"
+      - "xlC"
+      - "icpx"
+      - "icx"
+      - "clang++"
+    candidate_directories:
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    searched_directories:
+      - "/home/mesba7/.local/bin/c++"
+      - "/home/mesba7/.bun/bin/c++"
+      - "/usr/local/sbin/c++"
+      - "/usr/local/bin/c++"
+      - "/usr/sbin/c++"
+    found: "/usr/bin/c++"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/"
+    found: "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/4.3.4/CompilerIdCXX/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    found: "/usr/bin/ar"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    found: "/usr/bin/ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    found: "/usr/bin/strip"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    found: "/usr/bin/ld"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    found: "/usr/bin/nm"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    found: "/usr/bin/objdump"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    found: "/usr/bin/objcopy"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    found: "/usr/bin/readelf"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    searched_directories:
+      - "/usr/bin/dlltool"
+      - "/home/mesba7/.local/bin/dlltool"
+      - "/home/mesba7/.bun/bin/dlltool"
+      - "/usr/local/sbin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/usr/sbin/dlltool"
+      - "/sbin/dlltool"
+      - "/bin/dlltool"
+      - "/usr/games/dlltool"
+      - "/usr/local/games/dlltool"
+      - "/snap/bin/dlltool"
+      - "/home/mesba7/hadoop/bin/dlltool"
+      - "/home/mesba7/hadoop/sbin/dlltool"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    found: "/usr/bin/addr2line"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    searched_directories:
+      - "/usr/bin/tapi"
+      - "/home/mesba7/.local/bin/tapi"
+      - "/home/mesba7/.bun/bin/tapi"
+      - "/usr/local/sbin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/usr/sbin/tapi"
+      - "/sbin/tapi"
+      - "/bin/tapi"
+      - "/usr/games/tapi"
+      - "/usr/local/games/tapi"
+      - "/snap/bin/tapi"
+      - "/home/mesba7/hadoop/bin/tapi"
+      - "/home/mesba7/hadoop/sbin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ar-13.3"
+      - "gcc-ar-13"
+      - "gcc-ar13"
+      - "gcc-ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    searched_directories:
+      - "/usr/bin/gcc-ar-13.3"
+      - "/home/mesba7/.local/bin/gcc-ar-13.3"
+      - "/home/mesba7/.bun/bin/gcc-ar-13.3"
+      - "/usr/local/sbin/gcc-ar-13.3"
+      - "/usr/local/bin/gcc-ar-13.3"
+      - "/usr/sbin/gcc-ar-13.3"
+      - "/sbin/gcc-ar-13.3"
+      - "/bin/gcc-ar-13.3"
+      - "/usr/games/gcc-ar-13.3"
+      - "/usr/local/games/gcc-ar-13.3"
+      - "/snap/bin/gcc-ar-13.3"
+      - "/home/mesba7/hadoop/bin/gcc-ar-13.3"
+      - "/home/mesba7/hadoop/sbin/gcc-ar-13.3"
+    found: "/usr/bin/gcc-ar-13"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ranlib-13.3"
+      - "gcc-ranlib-13"
+      - "gcc-ranlib13"
+      - "gcc-ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    searched_directories:
+      - "/usr/bin/gcc-ranlib-13.3"
+      - "/home/mesba7/.local/bin/gcc-ranlib-13.3"
+      - "/home/mesba7/.bun/bin/gcc-ranlib-13.3"
+      - "/usr/local/sbin/gcc-ranlib-13.3"
+      - "/usr/local/bin/gcc-ranlib-13.3"
+      - "/usr/sbin/gcc-ranlib-13.3"
+      - "/sbin/gcc-ranlib-13.3"
+      - "/bin/gcc-ranlib-13.3"
+      - "/usr/games/gcc-ranlib-13.3"
+      - "/usr/local/games/gcc-ranlib-13.3"
+      - "/snap/bin/gcc-ranlib-13.3"
+      - "/home/mesba7/hadoop/bin/gcc-ranlib-13.3"
+      - "/home/mesba7/hadoop/sbin/gcc-ranlib-13.3"
+    found: "/usr/bin/gcc-ranlib-13"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "C compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cc"
+      - "gcc"
+      - "cl"
+      - "bcc"
+      - "xlc"
+      - "icx"
+      - "clang"
+    candidate_directories:
+      - "/usr/bin/"
+    found: "/usr/bin/cc"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/"
+    found: "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/4.3.4/CompilerIdC/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ar-13.3"
+      - "gcc-ar-13"
+      - "gcc-ar13"
+      - "gcc-ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    searched_directories:
+      - "/usr/bin/gcc-ar-13.3"
+      - "/home/mesba7/.local/bin/gcc-ar-13.3"
+      - "/home/mesba7/.bun/bin/gcc-ar-13.3"
+      - "/usr/local/sbin/gcc-ar-13.3"
+      - "/usr/local/bin/gcc-ar-13.3"
+      - "/usr/sbin/gcc-ar-13.3"
+      - "/sbin/gcc-ar-13.3"
+      - "/bin/gcc-ar-13.3"
+      - "/usr/games/gcc-ar-13.3"
+      - "/usr/local/games/gcc-ar-13.3"
+      - "/snap/bin/gcc-ar-13.3"
+      - "/home/mesba7/hadoop/bin/gcc-ar-13.3"
+      - "/home/mesba7/hadoop/sbin/gcc-ar-13.3"
+    found: "/usr/bin/gcc-ar-13"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ranlib-13.3"
+      - "gcc-ranlib-13"
+      - "gcc-ranlib13"
+      - "gcc-ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+    searched_directories:
+      - "/usr/bin/gcc-ranlib-13.3"
+      - "/home/mesba7/.local/bin/gcc-ranlib-13.3"
+      - "/home/mesba7/.bun/bin/gcc-ranlib-13.3"
+      - "/usr/local/sbin/gcc-ranlib-13.3"
+      - "/usr/local/bin/gcc-ranlib-13.3"
+      - "/usr/sbin/gcc-ranlib-13.3"
+      - "/sbin/gcc-ranlib-13.3"
+      - "/bin/gcc-ranlib-13.3"
+      - "/usr/games/gcc-ranlib-13.3"
+      - "/usr/local/games/gcc-ranlib-13.3"
+      - "/snap/bin/gcc-ranlib-13.3"
+      - "/home/mesba7/hadoop/bin/gcc-ranlib-13.3"
+      - "/home/mesba7/hadoop/sbin/gcc-ranlib-13.3"
+    found: "/usr/bin/gcc-ranlib-13"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-bMoA79"
+      binary: "/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-bMoA79"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-bMoA79'
+        
+        Run Build Command(s): /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0bc70/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_0bc70.dir/build.make CMakeFiles/cmTC_0bc70.dir/build
+        gmake[1]: Entering directory '/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-bMoA79'
+        Building CXX object CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o -c /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0bc70.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0bc70.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cc00xBMf.s
+        GNU C++17 (Ubuntu 13.3.0-6ubuntu2~24.04.1) version 13.3.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/13"
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/include/c++/13
+         /usr/include/x86_64-linux-gnu/c++/13
+         /usr/include/c++/13/backward
+         /usr/lib/gcc/x86_64-linux-gnu/13/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 7896445e4990772fdae9dc0659a99266
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0bc70.dir/'
+         as -v --64 -o CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc00xBMf.s
+        GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_0bc70
+        /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0bc70.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0bc70' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0bc70.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccCanMIw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_0bc70 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. -v CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        collect2 version 13.3.0
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccCanMIw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_0bc70 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. -v CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        GNU ld (GNU Binutils for Ubuntu) 2.42
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0bc70' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0bc70.'
+        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0bc70
+        gmake[1]: Leaving directory '/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-bMoA79'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/include/c++/13]
+          add: [/usr/include/x86_64-linux-gnu/c++/13]
+          add: [/usr/include/c++/13/backward]
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/include/c++/13] ==> [/usr/include/c++/13]
+        collapse include dir [/usr/include/x86_64-linux-gnu/c++/13] ==> [/usr/include/x86_64-linux-gnu/c++/13]
+        collapse include dir [/usr/include/c++/13/backward] ==> [/usr/include/c++/13/backward]
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/include/c++/13;/usr/include/x86_64-linux-gnu/c++/13;/usr/include/c++/13/backward;/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-bMoA79']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0bc70/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_0bc70.dir/build.make CMakeFiles/cmTC_0bc70.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-bMoA79']
+        ignore line: [Building CXX object CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o -c /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0bc70.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0bc70.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cc00xBMf.s]
+        ignore line: [GNU C++17 (Ubuntu 13.3.0-6ubuntu2~24.04.1) version 13.3.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/13"]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/include/c++/13]
+        ignore line: [ /usr/include/x86_64-linux-gnu/c++/13]
+        ignore line: [ /usr/include/c++/13/backward]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 7896445e4990772fdae9dc0659a99266]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0bc70.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc00xBMf.s]
+        ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_0bc70]
+        ignore line: [/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0bc70.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0bc70' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0bc70.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccCanMIw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_0bc70 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. -v CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccCanMIw.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_0bc70] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [collect2 version 13.3.0]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccCanMIw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_0bc70 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. -v CMakeFiles/cmTC_0bc70.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        linker tool for 'CXX': /usr/bin/ld
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13] ==> [/usr/lib/gcc/x86_64-linux-gnu/13]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld (GNU Binutils for Ubuntu) 2.42
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-4Yfu1e"
+      binary: "/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-4Yfu1e"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-4Yfu1e'
+        
+        Run Build Command(s): /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fd6f4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_fd6f4.dir/build.make CMakeFiles/cmTC_fd6f4.dir/build
+        gmake[1]: Entering directory '/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-4Yfu1e'
+        Building C object CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o -c /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_fd6f4.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_fd6f4.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccTo3gYT.s
+        GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04.1) version 13.3.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-linux-gnu/13/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: b220a7f1a1f69970d969d254ad9ec166
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_fd6f4.dir/'
+         as -v --64 -o CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o /tmp/ccTo3gYT.s
+        GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_fd6f4
+        /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd6f4.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fd6f4' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_fd6f4.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7eMM4P.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fd6f4 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. -v CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        collect2 version 13.3.0
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7eMM4P.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fd6f4 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. -v CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        GNU ld (GNU Binutils for Ubuntu) 2.42
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fd6f4' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_fd6f4.'
+        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o -o cmTC_fd6f4
+        gmake[1]: Leaving directory '/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-4Yfu1e'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-4Yfu1e']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fd6f4/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_fd6f4.dir/build.make CMakeFiles/cmTC_fd6f4.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-4Yfu1e']
+        ignore line: [Building C object CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o -c /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_fd6f4.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_fd6f4.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccTo3gYT.s]
+        ignore line: [GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04.1) version 13.3.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: b220a7f1a1f69970d969d254ad9ec166]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_fd6f4.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o /tmp/ccTo3gYT.s]
+        ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_fd6f4]
+        ignore line: [/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd6f4.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fd6f4' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_fd6f4.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7eMM4P.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fd6f4 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. -v CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc7eMM4P.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_fd6f4] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [collect2 version 13.3.0]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7eMM4P.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fd6f4 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. -v CMakeFiles/cmTC_fd6f4.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        linker tool for 'C': /usr/bin/ld
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13] ==> [/usr/lib/gcc/x86_64-linux-gnu/13]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld (GNU Binutils for Ubuntu) 2.42
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindPkgConfig.cmake:517 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindOpenSSL.cmake:295 (find_package)"
+      - "CMakeLists.txt:20 (find_package)"
+    mode: "program"
+    variable: "PKG_CONFIG_EXECUTABLE"
+    description: "pkg-config executable"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "pkg-config"
+      - "pkgconf"
+    candidate_directories:
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/sbin/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+    searched_directories:
+      - "/home/mesba7/.local/bin/pkg-config"
+      - "/home/mesba7/.local/bin/pkgconf"
+      - "/home/mesba7/.bun/bin/pkg-config"
+      - "/home/mesba7/.bun/bin/pkgconf"
+      - "/usr/local/sbin/pkg-config"
+      - "/usr/local/sbin/pkgconf"
+      - "/usr/local/bin/pkg-config"
+      - "/usr/local/bin/pkgconf"
+      - "/usr/sbin/pkg-config"
+      - "/usr/sbin/pkgconf"
+    found: "/usr/bin/pkg-config"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindPkgConfig.cmake:761 (find_library)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindPkgConfig.cmake:811 (_pkg_find_libs)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindPkgConfig.cmake:1149 (_pkg_recalculate)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindPkgConfig.cmake:1166 (_pkg_check_modules_internal)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindOpenSSL.cmake:297 (pkg_check_modules)"
+      - "CMakeLists.txt:20 (find_package)"
+    mode: "library"
+    variable: "pkgcfg_lib__OPENSSL_ssl"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ssl"
+    candidate_directories:
+      - "/usr/lib/x86_64-linux-gnu/"
+    found: "/usr/lib/x86_64-linux-gnu/libssl.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindPkgConfig.cmake:761 (find_library)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindPkgConfig.cmake:811 (_pkg_find_libs)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindPkgConfig.cmake:1149 (_pkg_recalculate)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindPkgConfig.cmake:1166 (_pkg_check_modules_internal)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindOpenSSL.cmake:297 (pkg_check_modules)"
+      - "CMakeLists.txt:20 (find_package)"
+    mode: "library"
+    variable: "pkgcfg_lib__OPENSSL_crypto"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "crypto"
+    candidate_directories:
+      - "/usr/lib/x86_64-linux-gnu/"
+    found: "/usr/lib/x86_64-linux-gnu/libcrypto.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindOpenSSL.cmake:370 (find_path)"
+      - "CMakeLists.txt:20 (find_package)"
+    mode: "path"
+    variable: "OPENSSL_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "openssl/ssl.h"
+    candidate_directories:
+      - "/usr/include/include/"
+      - "/usr/include/"
+      - "/home/mesba7/.local/bin/include/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/include/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/include/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/include/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/include/"
+      - "/usr/sbin/"
+      - "/usr/bin/include/"
+      - "/usr/bin/"
+      - "/sbin/include/"
+      - "/sbin/"
+      - "/bin/include/"
+      - "/bin/"
+      - "/usr/games/include/"
+      - "/usr/games/"
+      - "/usr/local/games/include/"
+      - "/usr/local/games/"
+      - "/snap/bin/include/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/include/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/include/"
+      - "/home/mesba7/hadoop/sbin/"
+      - "/usr/local/include/x86_64-linux-gnu/include/"
+      - "/usr/local/include/x86_64-linux-gnu/"
+      - "/usr/local/include/include/"
+      - "/usr/local/include/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/usr/include/x86_64-linux-gnu/include/"
+      - "/usr/include/x86_64-linux-gnu/"
+      - "/usr/include/include/"
+      - "/usr/include/"
+      - "/usr/include/"
+      - "/usr/"
+      - "/include/x86_64-linux-gnu/include/"
+      - "/include/x86_64-linux-gnu/"
+      - "/include/include/"
+      - "/include/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/include/x86_64-linux-gnu/include/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/include/x86_64-linux-gnu/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/include/include/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/include/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/include/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/"
+      - "/usr/X11R6/include/x86_64-linux-gnu/include/"
+      - "/usr/X11R6/include/x86_64-linux-gnu/"
+      - "/usr/X11R6/include/include/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/x86_64-linux-gnu/include/"
+      - "/usr/pkg/include/x86_64-linux-gnu/"
+      - "/usr/pkg/include/include/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/"
+      - "/opt/include/x86_64-linux-gnu/include/"
+      - "/opt/include/x86_64-linux-gnu/"
+      - "/opt/include/include/"
+      - "/opt/include/"
+      - "/opt/include/"
+      - "/opt/"
+      - "/usr/include/X11/include/"
+      - "/usr/include/X11/"
+    searched_directories:
+      - "/usr/include/include/openssl/ssl.h"
+    found: "/usr/include/"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindOpenSSL.cmake:628 (find_library)"
+      - "CMakeLists.txt:20 (find_package)"
+    mode: "library"
+    variable: "OPENSSL_SSL_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ssl"
+      - "ssleay32"
+      - "ssleay32MD"
+    candidate_directories:
+      - "/usr/lib/x86_64-linux-gnu/lib/"
+      - "/usr/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/home/mesba7/.local/bin/lib/"
+      - "/home/mesba7/.local/bin/lib64/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/lib/"
+      - "/home/mesba7/.bun/bin/lib64/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/lib/"
+      - "/usr/local/sbin/lib64/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/lib/"
+      - "/usr/local/bin/lib64/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/lib/"
+      - "/usr/sbin/lib64/"
+      - "/usr/sbin/"
+      - "/usr/bin/lib/"
+      - "/usr/bin/lib64/"
+      - "/usr/bin/"
+      - "/sbin/lib/"
+      - "/sbin/lib64/"
+      - "/sbin/"
+      - "/bin/lib/"
+      - "/bin/lib64/"
+      - "/bin/"
+      - "/usr/games/lib/"
+      - "/usr/games/lib64/"
+      - "/usr/games/"
+      - "/usr/local/games/lib/"
+      - "/usr/local/games/lib64/"
+      - "/usr/local/games/"
+      - "/snap/bin/lib/"
+      - "/snap/bin/lib64/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/lib/"
+      - "/home/mesba7/hadoop/bin/lib64/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/lib/"
+      - "/home/mesba7/hadoop/sbin/lib64/"
+      - "/home/mesba7/hadoop/sbin/"
+      - "/usr/local/lib/x86_64-linux-gnu/lib/"
+      - "/usr/local/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/lib/"
+      - "/usr/local/lib/lib64/"
+      - "/usr/local/lib/"
+      - "/usr/local/lib/"
+      - "/usr/local/lib64/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/lib/"
+      - "/usr/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/usr/lib/lib/"
+      - "/usr/lib/lib64/"
+      - "/usr/lib/"
+      - "/usr/lib/"
+      - "/usr/lib64/"
+      - "/usr/"
+      - "/lib/x86_64-linux-gnu/lib/"
+      - "/lib/x86_64-linux-gnu/lib64/"
+      - "/lib/x86_64-linux-gnu/"
+      - "/lib/lib/"
+      - "/lib/lib64/"
+      - "/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/x86_64-linux-gnu/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/x86_64-linux-gnu/lib64/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/x86_64-linux-gnu/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/lib64/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib64/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/lib/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/"
+      - "/usr/X11R6/lib/lib/"
+      - "/usr/X11R6/lib/lib64/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/lib64/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/lib/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/"
+      - "/usr/pkg/lib/lib/"
+      - "/usr/pkg/lib/lib64/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/lib64/"
+      - "/usr/pkg/"
+      - "/opt/lib/x86_64-linux-gnu/lib/"
+      - "/opt/lib/x86_64-linux-gnu/lib64/"
+      - "/opt/lib/x86_64-linux-gnu/"
+      - "/opt/lib/lib/"
+      - "/opt/lib/lib64/"
+      - "/opt/lib/"
+      - "/opt/lib/"
+      - "/opt/lib64/"
+      - "/opt/"
+      - "/usr/lib/X11/lib/"
+      - "/usr/lib/X11/lib64/"
+      - "/usr/lib/X11/"
+    searched_directories:
+      - "/usr/lib/x86_64-linux-gnu/lib/"
+      - "/usr/lib/x86_64-linux-gnu/lib/"
+      - "/usr/lib/x86_64-linux-gnu/lib/"
+      - "/usr/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/lib/x86_64-linux-gnu/lib64/"
+    found: "/usr/lib/x86_64-linux-gnu/libssl.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindOpenSSL.cmake:642 (find_library)"
+      - "CMakeLists.txt:20 (find_package)"
+    mode: "library"
+    variable: "OPENSSL_CRYPTO_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "crypto"
+    candidate_directories:
+      - "/usr/lib/x86_64-linux-gnu/lib/"
+      - "/usr/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/home/mesba7/.local/bin/lib/"
+      - "/home/mesba7/.local/bin/lib64/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/lib/"
+      - "/home/mesba7/.bun/bin/lib64/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/lib/"
+      - "/usr/local/sbin/lib64/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/lib/"
+      - "/usr/local/bin/lib64/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/lib/"
+      - "/usr/sbin/lib64/"
+      - "/usr/sbin/"
+      - "/usr/bin/lib/"
+      - "/usr/bin/lib64/"
+      - "/usr/bin/"
+      - "/sbin/lib/"
+      - "/sbin/lib64/"
+      - "/sbin/"
+      - "/bin/lib/"
+      - "/bin/lib64/"
+      - "/bin/"
+      - "/usr/games/lib/"
+      - "/usr/games/lib64/"
+      - "/usr/games/"
+      - "/usr/local/games/lib/"
+      - "/usr/local/games/lib64/"
+      - "/usr/local/games/"
+      - "/snap/bin/lib/"
+      - "/snap/bin/lib64/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/lib/"
+      - "/home/mesba7/hadoop/bin/lib64/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/lib/"
+      - "/home/mesba7/hadoop/sbin/lib64/"
+      - "/home/mesba7/hadoop/sbin/"
+      - "/usr/local/lib/x86_64-linux-gnu/lib/"
+      - "/usr/local/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/lib/"
+      - "/usr/local/lib/lib64/"
+      - "/usr/local/lib/"
+      - "/usr/local/lib/"
+      - "/usr/local/lib64/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/lib/"
+      - "/usr/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/usr/lib/lib/"
+      - "/usr/lib/lib64/"
+      - "/usr/lib/"
+      - "/usr/lib/"
+      - "/usr/lib64/"
+      - "/usr/"
+      - "/lib/x86_64-linux-gnu/lib/"
+      - "/lib/x86_64-linux-gnu/lib64/"
+      - "/lib/x86_64-linux-gnu/"
+      - "/lib/lib/"
+      - "/lib/lib64/"
+      - "/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/x86_64-linux-gnu/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/x86_64-linux-gnu/lib64/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/x86_64-linux-gnu/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/lib64/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib64/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/lib/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/"
+      - "/usr/X11R6/lib/lib/"
+      - "/usr/X11R6/lib/lib64/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/lib64/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/lib/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/"
+      - "/usr/pkg/lib/lib/"
+      - "/usr/pkg/lib/lib64/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/lib64/"
+      - "/usr/pkg/"
+      - "/opt/lib/x86_64-linux-gnu/lib/"
+      - "/opt/lib/x86_64-linux-gnu/lib64/"
+      - "/opt/lib/x86_64-linux-gnu/"
+      - "/opt/lib/lib/"
+      - "/opt/lib/lib64/"
+      - "/opt/lib/"
+      - "/opt/lib/"
+      - "/opt/lib64/"
+      - "/opt/"
+      - "/usr/lib/X11/lib/"
+      - "/usr/lib/X11/lib64/"
+      - "/usr/lib/X11/"
+    searched_directories:
+      - "/usr/lib/x86_64-linux-gnu/lib/"
+      - "/usr/lib/x86_64-linux-gnu/lib64/"
+    found: "/usr/lib/x86_64-linux-gnu/libcrypto.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindSQLite3.cmake:84 (find_path)"
+      - "CMakeLists.txt:21 (find_package)"
+    mode: "path"
+    variable: "SQLite3_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "sqlite3.h"
+    candidate_directories:
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+      - "/usr/local/include/x86_64-linux-gnu/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/usr/include/x86_64-linux-gnu/"
+      - "/usr/include/"
+      - "/usr/"
+      - "/include/x86_64-linux-gnu/"
+      - "/include/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/include/x86_64-linux-gnu/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/include/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/"
+      - "/usr/X11R6/include/x86_64-linux-gnu/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/x86_64-linux-gnu/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/"
+      - "/opt/include/x86_64-linux-gnu/"
+      - "/opt/include/"
+      - "/opt/"
+      - "/usr/include/X11/"
+    searched_directories:
+      - "/home/mesba7/.local/bin/sqlite3.h"
+      - "/home/mesba7/.bun/bin/sqlite3.h"
+      - "/usr/local/sbin/sqlite3.h"
+      - "/usr/local/bin/sqlite3.h"
+      - "/usr/sbin/sqlite3.h"
+      - "/usr/bin/sqlite3.h"
+      - "/sbin/sqlite3.h"
+      - "/bin/sqlite3.h"
+      - "/usr/games/sqlite3.h"
+      - "/usr/local/games/sqlite3.h"
+      - "/snap/bin/sqlite3.h"
+      - "/home/mesba7/hadoop/bin/sqlite3.h"
+      - "/home/mesba7/hadoop/sbin/sqlite3.h"
+      - "/usr/local/include/x86_64-linux-gnu/sqlite3.h"
+      - "/usr/local/include/sqlite3.h"
+      - "/usr/local/sqlite3.h"
+      - "/usr/include/x86_64-linux-gnu/sqlite3.h"
+      - "/usr/include/sqlite3.h"
+      - "/usr/sqlite3.h"
+      - "/include/x86_64-linux-gnu/sqlite3.h"
+      - "/include/sqlite3.h"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/include/x86_64-linux-gnu/sqlite3.h"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/include/sqlite3.h"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/sqlite3.h"
+      - "/usr/X11R6/include/x86_64-linux-gnu/sqlite3.h"
+      - "/usr/X11R6/include/sqlite3.h"
+      - "/usr/X11R6/sqlite3.h"
+      - "/usr/pkg/include/x86_64-linux-gnu/sqlite3.h"
+      - "/usr/pkg/include/sqlite3.h"
+      - "/usr/pkg/sqlite3.h"
+      - "/opt/include/x86_64-linux-gnu/sqlite3.h"
+      - "/opt/include/sqlite3.h"
+      - "/opt/sqlite3.h"
+      - "/usr/include/X11/sqlite3.h"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindSQLite3.cmake:91 (find_library)"
+      - "CMakeLists.txt:21 (find_package)"
+    mode: "library"
+    variable: "SQLite3_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "sqlite3"
+      - "sqlite"
+    candidate_directories:
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib/x86_64-linux-gnu/"
+      - "/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/x86_64-linux-gnu/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/"
+      - "/opt/lib/x86_64-linux-gnu/"
+      - "/opt/lib/"
+      - "/opt/"
+      - "/usr/lib/X11/"
+    searched_directories:
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib/x86_64-linux-gnu/"
+      - "/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/x86_64-linux-gnu/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/"
+      - "/opt/lib/x86_64-linux-gnu/"
+      - "/opt/lib/"
+      - "/opt/"
+      - "/usr/lib/X11/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib/x86_64-linux-gnu/"
+      - "/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/x86_64-linux-gnu/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/lib/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/"
+      - "/opt/lib/x86_64-linux-gnu/"
+      - "/opt/lib/"
+      - "/opt/"
+      - "/usr/lib/X11/"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindGit.cmake:111 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FetchContent.cmake:1887 (find_package)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FetchContent.cmake:1622 (__FetchContent_populateSubbuild)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FetchContent.cmake:2158:EVAL:2 (__FetchContent_doPopulation)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FetchContent.cmake:2158 (cmake_language)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FetchContent.cmake:2399 (__FetchContent_Populate)"
+      - "CMakeLists.txt:29 (FetchContent_MakeAvailable)"
+    mode: "program"
+    variable: "GIT_EXECUTABLE"
+    description: "Git command line client"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "git"
+    candidate_directories:
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/sbin/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+    searched_directories:
+      - "/home/mesba7/.local/bin/git"
+      - "/home/mesba7/.bun/bin/git"
+      - "/usr/local/sbin/git"
+      - "/usr/local/bin/git"
+      - "/usr/sbin/git"
+    found: "/usr/bin/git"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindPython/Support.cmake:2302 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindPython.cmake:721 (include)"
+      - "build/_deps/googletest-src/googletest/cmake/internal_utils.cmake:249 (find_package)"
+      - "build/_deps/googletest-src/googletest/CMakeLists.txt:86 (include)"
+    mode: "program"
+    variable: "_Python_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.15mu"
+      - "python3.15m"
+      - "python3.15u"
+      - "python3.15"
+      - "python3.15dmu"
+      - "python3.15dm"
+      - "python3.15du"
+      - "python3.15d"
+      - "python3"
+      - "python"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindPython/Support.cmake:2315 (find_program)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindPython.cmake:721 (include)"
+      - "build/_deps/googletest-src/googletest/cmake/internal_utils.cmake:249 (find_package)"
+      - "build/_deps/googletest-src/googletest/CMakeLists.txt:86 (include)"
+    mode: "program"
+    variable: "_Python_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.14mu"
+      - "python3.14m"
+      - "python3.14u"
+      - "python3.14"
+      - "python3.14dmu"
+      - "python3.14dm"
+      - "python3.14du"
+      - "python3.14d"
+      - "python3"
+      - "python"
+    candidate_directories:
+      - "/home/mesba7/.local/bin/bin/"
+      - "/home/mesba7/.local/bin/Scripts/"
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/bin/"
+      - "/home/mesba7/.bun/bin/Scripts/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/bin/"
+      - "/usr/local/sbin/Scripts/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/bin/"
+      - "/usr/local/bin/Scripts/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/bin/"
+      - "/usr/sbin/Scripts/"
+      - "/usr/sbin/"
+      - "/usr/bin/bin/"
+      - "/usr/bin/Scripts/"
+      - "/usr/bin/"
+      - "/sbin/bin/"
+      - "/sbin/Scripts/"
+      - "/sbin/"
+      - "/bin/bin/"
+      - "/bin/Scripts/"
+      - "/bin/"
+      - "/usr/games/bin/"
+      - "/usr/games/Scripts/"
+      - "/usr/games/"
+      - "/usr/local/games/bin/"
+      - "/usr/local/games/Scripts/"
+      - "/usr/local/games/"
+      - "/snap/bin/bin/"
+      - "/snap/bin/Scripts/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/bin/"
+      - "/home/mesba7/hadoop/bin/Scripts/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/bin/"
+      - "/home/mesba7/hadoop/sbin/Scripts/"
+      - "/home/mesba7/hadoop/sbin/"
+      - "/usr/local/bin/bin/"
+      - "/usr/local/bin/Scripts/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/bin/"
+      - "/usr/local/sbin/Scripts/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/local/Scripts/"
+      - "/usr/local/"
+      - "/usr/bin/bin/"
+      - "/usr/bin/Scripts/"
+      - "/usr/bin/"
+      - "/usr/sbin/bin/"
+      - "/usr/sbin/Scripts/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/usr/Scripts/"
+      - "/usr/"
+      - "/bin/bin/"
+      - "/bin/Scripts/"
+      - "/bin/"
+      - "/sbin/bin/"
+      - "/sbin/Scripts/"
+      - "/sbin/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/bin/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/Scripts/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/sbin/bin/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/sbin/Scripts/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/sbin/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/Scripts/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/"
+      - "/usr/X11R6/bin/bin/"
+      - "/usr/X11R6/bin/Scripts/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/bin/"
+      - "/usr/X11R6/sbin/Scripts/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/Scripts/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/bin/"
+      - "/usr/pkg/bin/Scripts/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/bin/"
+      - "/usr/pkg/sbin/Scripts/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/Scripts/"
+      - "/usr/pkg/"
+      - "/opt/bin/bin/"
+      - "/opt/bin/Scripts/"
+      - "/opt/bin/"
+      - "/opt/sbin/bin/"
+      - "/opt/sbin/Scripts/"
+      - "/opt/sbin/"
+      - "/opt/bin/"
+      - "/opt/Scripts/"
+      - "/opt/"
+    searched_directories:
+      - "/home/mesba7/.local/bin/bin/python3.14mu"
+      - "/home/mesba7/.local/bin/bin/python3.14m"
+      - "/home/mesba7/.local/bin/bin/python3.14u"
+      - "/home/mesba7/.local/bin/bin/python3.14"
+      - "/home/mesba7/.local/bin/bin/python3.14dmu"
+      - "/home/mesba7/.local/bin/bin/python3.14dm"
+      - "/home/mesba7/.local/bin/bin/python3.14du"
+      - "/home/mesba7/.local/bin/bin/python3.14d"
+      - "/home/mesba7/.local/bin/bin/python3"
+      - "/home/mesba7/.local/bin/bin/python"
+      - "/home/mesba7/.local/bin/Scripts/python3.14mu"
+      - "/home/mesba7/.local/bin/Scripts/python3.14m"
+      - "/home/mesba7/.local/bin/Scripts/python3.14u"
+      - "/home/mesba7/.local/bin/Scripts/python3.14"
+      - "/home/mesba7/.local/bin/Scripts/python3.14dmu"
+      - "/home/mesba7/.local/bin/Scripts/python3.14dm"
+      - "/home/mesba7/.local/bin/Scripts/python3.14du"
+      - "/home/mesba7/.local/bin/Scripts/python3.14d"
+      - "/home/mesba7/.local/bin/Scripts/python3"
+      - "/home/mesba7/.local/bin/Scripts/python"
+      - "/home/mesba7/.local/bin/python3.14mu"
+      - "/home/mesba7/.local/bin/python3.14m"
+      - "/home/mesba7/.local/bin/python3.14u"
+    found: "/home/mesba7/.local/bin/python3.14"
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindThreads.cmake:160 (check_c_source_compiles)"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/FindThreads.cmake:226 (_threads_check_libc)"
+      - "build/_deps/googletest-src/googletest/cmake/internal_utils.cmake:65 (find_package)"
+      - "build/_deps/googletest-src/googletest/CMakeLists.txt:88 (config_compiler_and_linker)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-MidMHa"
+      binary: "/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-MidMHa"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-MidMHa'
+        
+        Run Build Command(s): /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c17be/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c17be.dir/build.make CMakeFiles/cmTC_c17be.dir/build
+        gmake[1]: Entering directory '/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-MidMHa'
+        Building C object CMakeFiles/cmTC_c17be.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_c17be.dir/src.c.o -c /home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-MidMHa/src.c
+        Linking C executable cmTC_c17be
+        /home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c17be.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_c17be.dir/src.c.o -o cmTC_c17be
+        gmake[1]: Leaving directory '/home/mesba7/Documents/GitHub/Test_Beout_OS/build/CMakeFiles/CMakeScratch/TryCompile-MidMHa'
+        
+      exitCode: 0
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:63 (find_program)"
+    mode: "program"
+    variable: "CLANG_TIDY_EXE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "clang-tidy"
+    candidate_directories:
+      - "/home/mesba7/.local/bin/"
+      - "/home/mesba7/.bun/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/mesba7/hadoop/bin/"
+      - "/home/mesba7/hadoop/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/sbin/"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+    searched_directories:
+      - "/home/mesba7/.local/bin/clang-tidy"
+      - "/home/mesba7/.bun/bin/clang-tidy"
+      - "/usr/local/sbin/clang-tidy"
+      - "/usr/local/bin/clang-tidy"
+      - "/usr/sbin/clang-tidy"
+      - "/usr/bin/clang-tidy"
+      - "/sbin/clang-tidy"
+      - "/bin/clang-tidy"
+      - "/usr/games/clang-tidy"
+      - "/usr/local/games/clang-tidy"
+      - "/snap/bin/clang-tidy"
+      - "/home/mesba7/hadoop/bin/clang-tidy"
+      - "/home/mesba7/hadoop/sbin/clang-tidy"
+      - "/usr/local/bin/clang-tidy"
+      - "/usr/local/sbin/clang-tidy"
+      - "/usr/local/clang-tidy"
+      - "/usr/bin/clang-tidy"
+      - "/usr/sbin/clang-tidy"
+      - "/usr/clang-tidy"
+      - "/bin/clang-tidy"
+      - "/sbin/clang-tidy"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/bin/clang-tidy"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/sbin/clang-tidy"
+      - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/clang-tidy"
+      - "/usr/X11R6/bin/clang-tidy"
+      - "/usr/X11R6/sbin/clang-tidy"
+      - "/usr/X11R6/clang-tidy"
+      - "/usr/pkg/bin/clang-tidy"
+      - "/usr/pkg/sbin/clang-tidy"
+      - "/usr/pkg/clang-tidy"
+      - "/opt/bin/clang-tidy"
+      - "/opt/sbin/clang-tidy"
+      - "/opt/clang-tidy"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.bun/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/home/mesba7/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/mesba7/hadoop/bin"
+        - "/home/mesba7/hadoop/sbin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+...

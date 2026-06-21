@@ -1,0 +1,165 @@
+Start testing: Jun 22 00:23 EEST
+----------------------------------------------------------
+1/6 Testing: DummyTest.AssertTrue
+1/6 Test: DummyTest.AssertTrue
+Command: "/home/mesba7/Documents/GitHub/Test_Beout_OS/build/tests/run_all_tests" "--gtest_filter=DummyTest.AssertTrue" "--gtest_also_run_disabled_tests"
+Directory: /home/mesba7/Documents/GitHub/Test_Beout_OS/build/tests
+"DummyTest.AssertTrue" start time: Jun 22 00:23 EEST
+Output:
+----------------------------------------------------------
+Running main() from /home/mesba7/Documents/GitHub/Test_Beout_OS/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = DummyTest.AssertTrue
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DummyTest
+[ RUN      ] DummyTest.AssertTrue
+[       OK ] DummyTest.AssertTrue (0 ms)
+[----------] 1 test from DummyTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"DummyTest.AssertTrue" end time: Jun 22 00:23 EEST
+"DummyTest.AssertTrue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/6 Testing: ProvisioningTest.IPValidation
+2/6 Test: ProvisioningTest.IPValidation
+Command: "/home/mesba7/Documents/GitHub/Test_Beout_OS/build/tests/run_all_tests" "--gtest_filter=ProvisioningTest.IPValidation" "--gtest_also_run_disabled_tests"
+Directory: /home/mesba7/Documents/GitHub/Test_Beout_OS/build/tests
+"ProvisioningTest.IPValidation" start time: Jun 22 00:23 EEST
+Output:
+----------------------------------------------------------
+Running main() from /home/mesba7/Documents/GitHub/Test_Beout_OS/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = ProvisioningTest.IPValidation
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProvisioningTest
+[ RUN      ] ProvisioningTest.IPValidation
+[       OK ] ProvisioningTest.IPValidation (1 ms)
+[----------] 1 test from ProvisioningTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProvisioningTest.IPValidation" end time: Jun 22 00:23 EEST
+"ProvisioningTest.IPValidation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/6 Testing: DatabaseTest.SetAndGetConfig
+3/6 Test: DatabaseTest.SetAndGetConfig
+Command: "/home/mesba7/Documents/GitHub/Test_Beout_OS/build/tests/run_all_tests" "--gtest_filter=DatabaseTest.SetAndGetConfig" "--gtest_also_run_disabled_tests"
+Directory: /home/mesba7/Documents/GitHub/Test_Beout_OS/build/tests
+"DatabaseTest.SetAndGetConfig" start time: Jun 22 00:23 EEST
+Output:
+----------------------------------------------------------
+Running main() from /home/mesba7/Documents/GitHub/Test_Beout_OS/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = DatabaseTest.SetAndGetConfig
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DatabaseTest
+[ RUN      ] DatabaseTest.SetAndGetConfig
+[       OK ] DatabaseTest.SetAndGetConfig (0 ms)
+[----------] 1 test from DatabaseTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"DatabaseTest.SetAndGetConfig" end time: Jun 22 00:23 EEST
+"DatabaseTest.SetAndGetConfig" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/6 Testing: CryptoTest.GenerateAndVerifyEd25519
+4/6 Test: CryptoTest.GenerateAndVerifyEd25519
+Command: "/home/mesba7/Documents/GitHub/Test_Beout_OS/build/tests/run_all_tests" "--gtest_filter=CryptoTest.GenerateAndVerifyEd25519" "--gtest_also_run_disabled_tests"
+Directory: /home/mesba7/Documents/GitHub/Test_Beout_OS/build/tests
+"CryptoTest.GenerateAndVerifyEd25519" start time: Jun 22 00:23 EEST
+Output:
+----------------------------------------------------------
+Running main() from /home/mesba7/Documents/GitHub/Test_Beout_OS/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CryptoTest.GenerateAndVerifyEd25519
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CryptoTest
+[ RUN      ] CryptoTest.GenerateAndVerifyEd25519
+[       OK ] CryptoTest.GenerateAndVerifyEd25519 (4 ms)
+[----------] 1 test from CryptoTest (4 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (4 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"CryptoTest.GenerateAndVerifyEd25519" end time: Jun 22 00:23 EEST
+"CryptoTest.GenerateAndVerifyEd25519" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/6 Testing: CryptoTest.Base64Encoding
+5/6 Test: CryptoTest.Base64Encoding
+Command: "/home/mesba7/Documents/GitHub/Test_Beout_OS/build/tests/run_all_tests" "--gtest_filter=CryptoTest.Base64Encoding" "--gtest_also_run_disabled_tests"
+Directory: /home/mesba7/Documents/GitHub/Test_Beout_OS/build/tests
+"CryptoTest.Base64Encoding" start time: Jun 22 00:23 EEST
+Output:
+----------------------------------------------------------
+Running main() from /home/mesba7/Documents/GitHub/Test_Beout_OS/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CryptoTest.Base64Encoding
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CryptoTest
+[ RUN      ] CryptoTest.Base64Encoding
+[       OK ] CryptoTest.Base64Encoding (0 ms)
+[----------] 1 test from CryptoTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CryptoTest.Base64Encoding" end time: Jun 22 00:23 EEST
+"CryptoTest.Base64Encoding" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/6 Testing: ActivationTest.ApplyAndVerifyToken
+6/6 Test: ActivationTest.ApplyAndVerifyToken
+Command: "/home/mesba7/Documents/GitHub/Test_Beout_OS/build/tests/run_all_tests" "--gtest_filter=ActivationTest.ApplyAndVerifyToken" "--gtest_also_run_disabled_tests"
+Directory: /home/mesba7/Documents/GitHub/Test_Beout_OS/build/tests
+"ActivationTest.ApplyAndVerifyToken" start time: Jun 22 00:23 EEST
+Output:
+----------------------------------------------------------
+Running main() from /home/mesba7/Documents/GitHub/Test_Beout_OS/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = ActivationTest.ApplyAndVerifyToken
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ActivationTest
+[ RUN      ] ActivationTest.ApplyAndVerifyToken
+[       OK ] ActivationTest.ApplyAndVerifyToken (4 ms)
+[----------] 1 test from ActivationTest (4 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (4 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ActivationTest.ApplyAndVerifyToken" end time: Jun 22 00:23 EEST
+"ActivationTest.ApplyAndVerifyToken" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 22 00:23 EEST

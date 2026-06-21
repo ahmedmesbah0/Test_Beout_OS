@@ -1,0 +1,66 @@
+{
+  "tests": 6,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "DummyTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "AssertTrue",
+          "file": "\/home\/mesba7\/Documents\/GitHub\/Test_Beout_OS\/tests\/main_test.cpp",
+          "line": 3
+        }
+      ]
+    },
+    {
+      "name": "ProvisioningTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "IPValidation",
+          "file": "\/home\/mesba7\/Documents\/GitHub\/Test_Beout_OS\/tests\/provisioning_test.cpp",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "name": "DatabaseTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "SetAndGetConfig",
+          "file": "\/home\/mesba7\/Documents\/GitHub\/Test_Beout_OS\/tests\/provisioning_test.cpp",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "name": "CryptoTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "GenerateAndVerifyEd25519",
+          "file": "\/home\/mesba7\/Documents\/GitHub\/Test_Beout_OS\/tests\/crypto_test.cpp",
+          "line": 6
+        },
+        {
+          "name": "Base64Encoding",
+          "file": "\/home\/mesba7\/Documents\/GitHub\/Test_Beout_OS\/tests\/crypto_test.cpp",
+          "line": 20
+        }
+      ]
+    },
+    {
+      "name": "ActivationTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "ApplyAndVerifyToken",
+          "file": "\/home\/mesba7\/Documents\/GitHub\/Test_Beout_OS\/tests\/activation_test.cpp",
+          "line": 10
+        }
+      ]
+    }
+  ]
+}

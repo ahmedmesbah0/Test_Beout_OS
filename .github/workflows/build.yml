@@ -1,0 +1,38 @@
+name: Beout_OS Build and Test
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake g++ libssl-dev libsqlite3-dev libgtest-dev clang-tidy live-build
+        
+    - name: Build and Install GTest
+      run: |
+        cd /usr/src/gtest
+        sudo cmake CMakeLists.txt
+        sudo make
+        sudo cp lib/*.a /usr/lib
+        
+    - name: Configure CMake
+      run: ./build.sh configure
+      
+    - name: Build
+      run: ./build.sh build
+      
+    - name: Test
+      run: ./build.sh test
+      
+    - name: Build ISO
+      run: ./build.sh iso

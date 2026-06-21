@@ -1,0 +1,7 @@
+DummyTest.AssertTrue 1 0.00236085
+ProvisioningTest.IPValidation 1 0.00372547
+DatabaseTest.SetAndGetConfig 1 0.00253653
+CryptoTest.GenerateAndVerifyEd25519 1 0.00636094
+CryptoTest.Base64Encoding 1 0.00233346
+ActivationTest.ApplyAndVerifyToken 1 0.00687446
+---

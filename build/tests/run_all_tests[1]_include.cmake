@@ -1,0 +1,5 @@
+if(EXISTS "/home/mesba7/Documents/GitHub/Test_Beout_OS/build/tests/run_all_tests[1]_tests.cmake")
+  include("/home/mesba7/Documents/GitHub/Test_Beout_OS/build/tests/run_all_tests[1]_tests.cmake")
+else()
+  add_test(run_all_tests_NOT_BUILT run_all_tests_NOT_BUILT)
+endif()
