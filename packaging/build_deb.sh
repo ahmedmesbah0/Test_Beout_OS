@@ -19,7 +19,7 @@ cd ..
 echo "Copying binaries..."
 cp build/api/beout_os_api $BASE_DIR/opt/beout_os/bin/
 cp build/provisioning/beout_os_provisioning $BASE_DIR/opt/beout_os/bin/
-cp sync_network.sh $BASE_DIR/opt/beout_os/bin/
+cp packaging/sync_network.sh $BASE_DIR/opt/beout_os/bin/
 chmod +x $BASE_DIR/opt/beout_os/bin/sync_network.sh
 
 echo "Copying Dashboard UI..."
