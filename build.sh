@@ -48,6 +48,14 @@ function build_iso() {
     echo "Running DEB packaging..."
     "${PROJECT_ROOT}/packaging/build_deb.sh"
     
+    echo "Configuring live-build..."
+    cd "${PROJECT_ROOT}/installer"
+    lb config
+
+    # Create directories just in case lb config didn't create them fully
+    mkdir -p "${PROJECT_ROOT}/installer/config/packages.chroot"
+    mkdir -p "${PROJECT_ROOT}/installer/config/hooks/live"
+    
     # Copy deb to installer packages
     cp "${PROJECT_ROOT}/beout_os-core.deb" "${PROJECT_ROOT}/installer/config/packages.chroot/" || true
     
@@ -55,9 +63,6 @@ function build_iso() {
     cp "${PROJECT_ROOT}/hardening/harden.sh" "${PROJECT_ROOT}/installer/config/hooks/live/99-harden.chroot"
     chmod +x "${PROJECT_ROOT}/installer/config/hooks/live/99-harden.chroot"
 
-    echo "Configuring live-build..."
-    cd "${PROJECT_ROOT}/installer"
-    lb config
     echo "Building ISO (requires sudo)..."
     sudo lb build
 }
