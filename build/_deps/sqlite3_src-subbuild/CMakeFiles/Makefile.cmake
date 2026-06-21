@@ -7,8 +7,10 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake"
   "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeGenericSystem.cmake"
   "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake"
+  "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeSystem.cmake.in"
   "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake"
   "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake"
   "/home/mesba7/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.3/Modules/ExternalProject.cmake"
@@ -36,6 +38,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "CMakeFiles/4.3.4/CMakeSystem.cmake"
   "sqlite3_src-populate-prefix/tmp/sqlite3_src-populate-mkdirs.cmake"
   "sqlite3_src-populate-prefix/src/sqlite3_src-populate-stamp/download-sqlite3_src-populate.cmake"
   "sqlite3_src-populate-prefix/src/sqlite3_src-populate-stamp/verify-sqlite3_src-populate.cmake"

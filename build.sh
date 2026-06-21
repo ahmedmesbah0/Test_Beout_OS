@@ -42,6 +42,19 @@ function run_tests() {
 }
 
 function build_iso() {
+    echo "Preparing installer environment..."
+    
+    # Run the deb packaging first
+    echo "Running DEB packaging..."
+    "${PROJECT_ROOT}/packaging/build_deb.sh"
+    
+    # Copy deb to installer packages
+    cp "${PROJECT_ROOT}/beout_os-core.deb" "${PROJECT_ROOT}/installer/config/packages.chroot/" || true
+    
+    # Copy harden script to live hooks
+    cp "${PROJECT_ROOT}/hardening/harden.sh" "${PROJECT_ROOT}/installer/config/hooks/live/99-harden.chroot"
+    chmod +x "${PROJECT_ROOT}/installer/config/hooks/live/99-harden.chroot"
+
     echo "Configuring live-build..."
     cd "${PROJECT_ROOT}/installer"
     lb config
