@@ -74,14 +74,12 @@ void CliEngine::factory_reset() {
 
 void CliEngine::reboot() {
     std::cout << "Rebooting system...\n";
-    // Mock system call
-    // std::system("reboot");
+    std::system("reboot");
 }
 
 void CliEngine::shutdown() {
     std::cout << "Shutting down system...\n";
-    // Mock system call
-    // std::system("shutdown -h now");
+    std::system("shutdown -h now");
 }
 
 void CliEngine::run() {

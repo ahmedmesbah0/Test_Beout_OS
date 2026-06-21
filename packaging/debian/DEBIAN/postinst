@@ -14,6 +14,18 @@ if [ "$1" = "configure" ]; then
     fi
 
     # Reload systemd and enable services
+    mkdir -p /etc/systemd/system/getty@tty1.service.d/
+    cat <<EOF > /etc/systemd/system/getty@tty1.service.d/override.conf
+[Service]
+ExecStart=
+ExecStart=-/opt/beout_os/bin/beout_os_provisioning
+StandardInput=tty
+StandardOutput=tty
+TTYPath=/dev/tty1
+Type=idle
+Restart=always
+EOF
+
     systemctl daemon-reload
     systemctl enable beout_os-api
     systemctl enable beout_os-provisioning

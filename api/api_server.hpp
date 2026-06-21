@@ -2,6 +2,7 @@
 
 #include <string>
 #include <memory>
+#include <mutex>
 
 #define CPPHTTPLIB_OPENSSL_SUPPORT
 #include <httplib.h>
@@ -27,6 +28,7 @@ private:
 
     // Authentication token storage for session management
     std::string current_session_token_;
+    std::mutex session_mutex_;
 };
 
 } // namespace api

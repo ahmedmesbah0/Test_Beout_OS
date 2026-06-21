@@ -4,6 +4,7 @@
 #include <memory>
 #include <vector>
 #include <optional>
+#include <mutex>
 
 struct sqlite3;
 
@@ -26,6 +27,7 @@ public:
 private:
     std::string db_path_;
     sqlite3* db_{nullptr};
+    mutable std::mutex db_mutex_;
 
     bool execute_query(const std::string& query) const;
 };
