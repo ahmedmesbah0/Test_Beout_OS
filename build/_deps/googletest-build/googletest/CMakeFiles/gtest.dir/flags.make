@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/mesba7/Documents/GitHub/Test_Beout_OS/build/_deps/googletest-src/googletest/include -I/home/mesba7/Documents/GitHub/Test_Beout_OS/build/_deps/googletest-src/googletest
 
-CXX_FLAGS =  -Wall -Wextra -Wpedantic -Werror -O3 -DNDEBUG -O3 -D_FORTIFY_SOURCE=2 -fstack-protector-strong -std=c++20 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+CXX_FLAGS =  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 -D_FORTIFY_SOURCE=2 -fstack-protector-strong -std=c++20 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
 
