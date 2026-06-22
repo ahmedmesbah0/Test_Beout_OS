@@ -14,7 +14,7 @@ function usage() {
     echo "  configure  Run CMake configure"
     echo "  build      Build all targets"
     echo "  test       Run unit tests"
-    echo "  iso        Build the Debian live ISO"
+    echo "  iso        Build the Beout_OS installer ISO"
     echo "  all        Clean, configure, build, and test"
 }
 
@@ -42,29 +42,79 @@ function run_tests() {
 }
 
 function build_iso() {
-    echo "Preparing installer environment..."
-    
-    # Run the deb packaging first
-    echo "Running DEB packaging..."
+    echo "============================================"
+    echo "  Beout_OS ISO Builder"
+    echo "============================================"
+    echo ""
+
+    # Step 1: Build the .deb package
+    echo "[1/4] Building .deb package..."
     "${PROJECT_ROOT}/packaging/build_deb.sh"
-    
-    echo "Configuring live-build..."
+
+    # Step 2: Configure live-build
+    echo "[2/4] Configuring live-build..."
     cd "${PROJECT_ROOT}/installer"
     lb config
 
-    # Create directories just in case lb config didn't create them fully
-    mkdir -p "${PROJECT_ROOT}/installer/config/packages.chroot"
-    mkdir -p "${PROJECT_ROOT}/installer/config/hooks/live"
-    
-    # Copy deb to installer packages
-    cp "${PROJECT_ROOT}/beout_os-core.deb" "${PROJECT_ROOT}/installer/config/packages.chroot/" || true
-    
-    # Copy harden script to live hooks
-    cp "${PROJECT_ROOT}/hardening/harden.sh" "${PROJECT_ROOT}/installer/config/hooks/live/99-harden.chroot"
-    chmod +x "${PROJECT_ROOT}/installer/config/hooks/live/99-harden.chroot"
+    # Step 3: Inject custom installer + packages into the live filesystem
+    echo "[3/4] Injecting Beout_OS installer into live image..."
 
-    echo "Building ISO (requires sudo)..."
+    # Create the includes.chroot directory structure
+    # Files placed here appear in the live filesystem at the same path
+    local CHROOT_DIR="${PROJECT_ROOT}/installer/config/includes.chroot"
+
+    # Installer files
+    mkdir -p "${CHROOT_DIR}/opt/beout_os/installer"
+    cp "${PROJECT_ROOT}/installer/beout_installer.sh" "${CHROOT_DIR}/opt/beout_os/installer/"
+    chmod +x "${CHROOT_DIR}/opt/beout_os/installer/beout_installer.sh"
+
+    # Copy the .deb package (the installer will dpkg -i this into the target disk)
+    cp "${PROJECT_ROOT}/beout_os-core.deb" "${CHROOT_DIR}/opt/beout_os/installer/"
+
+    # Copy the hardening script (the installer will run this inside the target chroot)
+    cp "${PROJECT_ROOT}/hardening/harden.sh" "${CHROOT_DIR}/opt/beout_os/installer/"
+    chmod +x "${CHROOT_DIR}/opt/beout_os/installer/harden.sh"
+
+    # Create systemd service that auto-runs our installer on boot
+    mkdir -p "${CHROOT_DIR}/etc/systemd/system"
+    cat <<'EOF' > "${CHROOT_DIR}/etc/systemd/system/beout-installer.service"
+[Unit]
+Description=Beout_OS Custom Installer
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+Type=idle
+ExecStart=/opt/beout_os/installer/beout_installer.sh
+StandardInput=tty
+StandardOutput=tty
+TTYPath=/dev/tty1
+Restart=no
+User=root
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+    # Enable the installer service by creating the symlink
+    mkdir -p "${CHROOT_DIR}/etc/systemd/system/multi-user.target.wants"
+    ln -sf /etc/systemd/system/beout-installer.service \
+        "${CHROOT_DIR}/etc/systemd/system/multi-user.target.wants/beout-installer.service"
+
+    # Mask getty@tty1 in the live environment so our installer gets the console
+    ln -sf /dev/null "${CHROOT_DIR}/etc/systemd/system/getty@tty1.service"
+
+    # Step 4: Build the ISO
+    echo "[4/4] Building ISO image (this takes several minutes)..."
     sudo lb build
+
+    echo ""
+    echo "============================================"
+    echo "  ISO BUILD COMPLETE"
+    echo "============================================"
+    echo ""
+    echo "  Output: ${PROJECT_ROOT}/installer/live-image-amd64.hybrid.iso"
+    echo ""
 }
 
 if [[ $# -eq 0 ]]; then

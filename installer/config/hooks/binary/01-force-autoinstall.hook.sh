@@ -1,42 +1,41 @@
 #!/bin/sh
 
-echo "Forcing ISO to boot into Automated Installer directly..."
+echo "Configuring Beout_OS branded boot menu..."
 
-# Rewrite ISOLINUX (Legacy Boot)
+# Rewrite ISOLINUX (Legacy BIOS Boot)
 if [ -d binary/isolinux ]; then
-    cat <<EOF > binary/isolinux/isolinux.cfg
-include menu.cfg
-default install
+    cat <<'EOF' > binary/isolinux/isolinux.cfg
+default beout_install
 prompt 0
-timeout 1
+timeout 10
 EOF
 
-    cat <<EOF > binary/isolinux/install.cfg
-label install
-    menu label ^Automated Install
-    linux /install/vmlinuz
-    initrd /install/initrd.gz
-    append vga=normal auto=true priority=critical preseed/file=/cdrom/install/preseed.cfg quiet
+    cat <<'EOF' > binary/isolinux/live.cfg
+label beout_install
+    menu label Beout_OS Installer
+    linux /live/vmlinuz
+    initrd /live/initrd.img
+    append boot=live components quiet splash username=root
 EOF
 
-    cat <<EOF > binary/isolinux/menu.cfg
+    cat <<'EOF' > binary/isolinux/menu.cfg
 menu hshift 0
 menu width 82
-menu title Boot menu
+menu title Beout_OS Enterprise Security Appliance
 include stdmenu.cfg
-include install.cfg
+include live.cfg
 EOF
 fi
 
 # Rewrite GRUB (UEFI Boot)
 if [ -d binary/boot/grub ]; then
-    cat <<EOF > binary/boot/grub/grub.cfg
+    cat <<'EOF' > binary/boot/grub/grub.cfg
 set default=0
 set timeout=1
 
-menuentry "Automated Install" {
-    linux /install/vmlinuz vga=normal auto=true priority=critical preseed/file=/cdrom/install/preseed.cfg quiet
-    initrd /install/initrd.gz
+menuentry "Beout_OS Installer" {
+    linux /live/vmlinuz boot=live components quiet splash username=root
+    initrd /live/initrd.img
 }
 EOF
 fi
