@@ -16,15 +16,11 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y cmake g++ libssl-dev libsqlite3-dev libgtest-dev clang-tidy live-build
-        
-    - name: Build and Install GTest
-      run: |
-        cd /usr/src/gtest
-        sudo cmake CMakeLists.txt
-        sudo make
-        sudo cp lib/*.a /usr/lib
-        
+        sudo apt-get install -y cmake g++ libssl-dev libsqlite3-dev
+
+    - name: Clean stale build artifacts
+      run: ./build.sh clean
+
     - name: Configure CMake
       run: ./build.sh configure
       
@@ -33,6 +29,3 @@ jobs:
       
     - name: Test
       run: ./build.sh test
-      
-    - name: Build ISO
-      run: ./build.sh iso

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libactivation.a CMakeFiles/activation.dir/machine_id.cpp.o CMakeFiles/activation.dir/activation_manager.cpp.o
-/usr/bin/ranlib libactivation.a
