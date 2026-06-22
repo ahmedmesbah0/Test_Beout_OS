@@ -99,8 +99,11 @@ void ApiServer::setup_routes() {
         if (!check_auth(req, res)) return;
 
         json response = {
+            {"wan_interface", db_->get_config("network_WAN_interface").value_or("")},
             {"wan_ip", db_->get_config("network_WAN_ip").value_or("")},
+            {"lan_interface", db_->get_config("network_LAN_interface").value_or("")},
             {"lan_ip", db_->get_config("network_LAN_ip").value_or("")},
+            {"mgmt_interface", db_->get_config("network_MGMT_interface").value_or("")},
             {"mgmt_ip", db_->get_config("network_MGMT_ip").value_or("")}
         };
         res.set_content(response.dump(), "application/json");
@@ -113,8 +116,11 @@ void ApiServer::setup_routes() {
 
         try {
             auto body = json::parse(req.body);
+            if (body.contains("wan_interface")) db_->set_config("network_WAN_interface", body["wan_interface"]);
             if (body.contains("wan_ip")) db_->set_config("network_WAN_ip", body["wan_ip"]);
+            if (body.contains("lan_interface")) db_->set_config("network_LAN_interface", body["lan_interface"]);
             if (body.contains("lan_ip")) db_->set_config("network_LAN_ip", body["lan_ip"]);
+            if (body.contains("mgmt_interface")) db_->set_config("network_MGMT_interface", body["mgmt_interface"]);
             if (body.contains("mgmt_ip")) db_->set_config("network_MGMT_ip", body["mgmt_ip"]);
             
             res.set_content(json{{"status", "success"}}.dump(), "application/json");

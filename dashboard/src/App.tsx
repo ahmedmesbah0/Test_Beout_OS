@@ -178,6 +178,10 @@ function Interfaces({ token }: { token: string }) {
           <div key={iface} className={`glass-panel animate-fade-in delay-${i + 1}`}>
             <h2 style={{ fontSize: '1.25rem', marginBottom: '16px' }}>{iface} Port</h2>
             <div className="data-row">
+              <span className="data-label">Interface Device</span>
+              <span className="data-value">{config ? config[`${iface.toLowerCase()}_interface`] || 'Unassigned' : 'Loading...'}</span>
+            </div>
+            <div className="data-row">
               <span className="data-label">IP Address</span>
               <span className="data-value">{config ? config[`${iface.toLowerCase()}_ip`] || 'Unconfigured' : 'Loading...'}</span>
             </div>

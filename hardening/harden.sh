@@ -40,6 +40,7 @@ ln -sf /dev/null /etc/systemd/system/getty@tty3.service 2>/dev/null || true
 ln -sf /dev/null /etc/systemd/system/getty@tty4.service 2>/dev/null || true
 ln -sf /dev/null /etc/systemd/system/getty@tty5.service 2>/dev/null || true
 ln -sf /dev/null /etc/systemd/system/getty@tty6.service 2>/dev/null || true
+ln -sf /dev/null /etc/systemd/system/getty-static.service 2>/dev/null || true
 
 # 7. Force enable the provisioning and api services manually
 # (Using symlinks instead of systemctl enable — safe inside chroot)

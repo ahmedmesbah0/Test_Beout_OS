@@ -2,12 +2,14 @@
 #include <iostream>
 #include <regex>
 #include <cstdlib>
+#include <filesystem>
+#include <vector>
 
 namespace beout_os {
 namespace provisioning {
 
 CliEngine::CliEngine(std::shared_ptr<database::DatabaseManager> db)
-    : db_(std::move(db)) {}
+: db_(std::move(db)) {}
 
 void CliEngine::print_menu() {
     std::cout << "\n============================================\n"
@@ -32,8 +34,46 @@ bool CliEngine::validate_ip(const std::string& ip) {
     return std::regex_match(ip, ip_regex);
 }
 
+std::vector<std::string> get_available_interfaces() {
+    std::vector<std::string> ifaces;
+    try {
+        for (const auto& entry : std::filesystem::directory_iterator("/sys/class/net")) {
+            std::string name = entry.path().filename().string();
+            if (name != "lo") {
+                ifaces.push_back(name);
+            }
+        }
+    } catch (...) {
+        // Fallback
+    }
+    return ifaces;
+}
+
 void CliEngine::configure_interface(const std::string& iface) {
     std::cout << "\nConfiguring " << iface << " interface\n";
+
+    auto ifaces = get_available_interfaces();
+    std::string selected_iface = "";
+    if (ifaces.empty()) {
+        std::cout << "No network interfaces detected! Enter interface name manually (e.g., eth0): ";
+        std::cin >> selected_iface;
+    } else {
+        std::cout << "Available network interfaces:\n";
+        for (size_t i = 0; i < ifaces.size(); ++i) {
+            std::cout << "  " << i + 1 << ". " << ifaces[i] << "\n";
+        }
+        std::cout << "Select interface (1-" << ifaces.size() << "): ";
+        int choice;
+        if (std::cin >> choice && choice >= 1 && choice <= static_cast<int>(ifaces.size())) {
+            selected_iface = ifaces[choice - 1];
+        } else {
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
+            std::cout << "Invalid choice! Enter interface name manually: ";
+            std::cin >> selected_iface;
+        }
+    }
+
     std::string ip;
     std::cout << "Enter IP address (e.g., 192.168.1.1): ";
     std::cin >> ip;
@@ -52,10 +92,11 @@ void CliEngine::configure_interface(const std::string& iface) {
         return;
     }
 
+    db_->set_config("network_" + iface + "_interface", selected_iface);
     db_->set_config("network_" + iface + "_ip", ip);
     db_->set_config("network_" + iface + "_netmask", netmask);
     
-    std::cout << iface << " configured successfully.\n";
+    std::cout << iface << " configured successfully on " << selected_iface << ".\n";
 }
 
 void CliEngine::factory_reset() {
@@ -64,10 +105,15 @@ void CliEngine::factory_reset() {
     std::cin >> confirm;
     if (confirm == "y" || confirm == "Y") {
         std::cout << "Erasing configuration database...\n";
-        // Simple mock of factory reset
+        db_->set_config("network_WAN_interface", "");
         db_->set_config("network_WAN_ip", "");
+        db_->set_config("network_WAN_netmask", "");
+        db_->set_config("network_LAN_interface", "");
         db_->set_config("network_LAN_ip", "");
+        db_->set_config("network_LAN_netmask", "");
+        db_->set_config("network_MGMT_interface", "");
         db_->set_config("network_MGMT_ip", "");
+        db_->set_config("network_MGMT_netmask", "");
         std::cout << "Factory reset complete. Please reboot.\n";
     }
 }
@@ -99,9 +145,15 @@ void CliEngine::run() {
             case 3: configure_interface("MGMT"); break;
             case 4: {
                 std::cout << "\n--- Current Configuration ---\n";
-                std::cout << "WAN IP: " << db_->get_config("network_WAN_ip").value_or("Unconfigured") << "\n";
-                std::cout << "LAN IP: " << db_->get_config("network_LAN_ip").value_or("Unconfigured") << "\n";
-                std::cout << "MGMT IP: " << db_->get_config("network_MGMT_ip").value_or("Unconfigured") << "\n";
+                std::cout << "WAN: " << db_->get_config("network_WAN_interface").value_or("Unassigned")
+                          << " (IP: " << db_->get_config("network_WAN_ip").value_or("Unconfigured")
+                          << ", Netmask: " << db_->get_config("network_WAN_netmask").value_or("Unconfigured") << ")\n";
+                std::cout << "LAN: " << db_->get_config("network_LAN_interface").value_or("Unassigned")
+                          << " (IP: " << db_->get_config("network_LAN_ip").value_or("Unconfigured")
+                          << ", Netmask: " << db_->get_config("network_LAN_netmask").value_or("Unconfigured") << ")\n";
+                std::cout << "MGMT: " << db_->get_config("network_MGMT_interface").value_or("Unassigned")
+                          << " (IP: " << db_->get_config("network_MGMT_ip").value_or("Unconfigured")
+                          << ", Netmask: " << db_->get_config("network_MGMT_netmask").value_or("Unconfigured") << ")\n";
                 break;
             }
             case 5: factory_reset(); break;
